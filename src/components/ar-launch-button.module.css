@@ -1,0 +1,14 @@
+.wrap {
+  display: contents;
+}
+
+.hint {
+  flex-basis: 100%;
+  margin: 0;
+}
+
+.link {
+  color: var(--burgundy-soft);
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}

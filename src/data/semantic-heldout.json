@@ -1,0 +1,370 @@
+{
+  "cases": [
+    {
+      "id": "semantic-camera-low-fidelity-literal",
+      "prompt": "做一只小狐狸桌宠，左耳一个银色相机挂件。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "mockPayload": {
+        "accessoryRequests": [
+          {
+            "requestedLabel": "挂件",
+            "requestedNoun": "挂件",
+            "familyGuess": "generic-ornament",
+            "prototypeCandidates": [
+              {
+                "id": "camera",
+                "confidence": 0.95
+              }
+            ],
+            "traits": ["rigid", "flat-face"]
+          }
+        ]
+      },
+      "expect": {
+        "requestedNounIncludes": "相机",
+        "requestedLabelIncludes": "相机",
+        "requestedAnchorPhraseIncludes": "左耳",
+        "requestedColorIncludes": "银",
+        "topPrototypeId": "camera",
+        "requireNonGenericTopPrototype": true,
+        "runtimeShapeClass": "camera-charm"
+      }
+    },
+    {
+      "id": "semantic-boat-low-fidelity-literal",
+      "prompt": "做一只小狐狸桌宠，右耳一个蓝色小艇挂饰。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "mockPayload": {
+        "accessoryRequests": [
+          {
+            "requestedLabel": "挂饰",
+            "requestedNoun": "挂饰",
+            "familyGuess": "generic-ornament",
+            "prototypeCandidates": [
+              {
+                "id": "boat",
+                "confidence": 0.94
+              }
+            ],
+            "traits": ["rigid"]
+          }
+        ]
+      },
+      "expect": {
+        "requestedNounIncludes": "小艇",
+        "requestedLabelIncludes": "小艇",
+        "requestedAnchorPhraseIncludes": "右耳",
+        "requestedColorIncludes": "蓝",
+        "topPrototypeId": "boat",
+        "requireNonGenericTopPrototype": true
+      }
+    },
+    {
+      "id": "semantic-cup-anchor-color-rescue",
+      "prompt": "做一只小狐狸桌宠，胸前挂一个紫色水杯。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "mockPayload": {
+        "accessoryRequests": [
+          {
+            "requestedLabel": "水杯",
+            "requestedNoun": "水杯",
+            "familyGuess": "generic-ornament",
+            "prototypeCandidates": [
+              {
+                "id": "cup",
+                "confidence": 0.92
+              }
+            ],
+            "traits": ["rigid", "open-top", "cylindrical"]
+          }
+        ]
+      },
+      "expect": {
+        "requestedNounIncludes": "水杯",
+        "requestedLabelIncludes": "水杯",
+        "requestedAnchorPhraseIncludes": "胸前",
+        "requestedColorIncludes": "紫",
+        "topPrototypeId": "cup",
+        "requireNonGenericTopPrototype": true
+      }
+    },
+    {
+      "id": "semantic-leaf-anchor-color-rescue",
+      "prompt": "做一只小狐狸桌宠，尾巴上面一个绿色叶片挂饰。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "mockPayload": {
+        "accessoryRequests": [
+          {
+            "requestedLabel": "叶片挂饰",
+            "requestedNoun": "叶片",
+            "familyGuess": "leaf"
+          }
+        ]
+      },
+      "expect": {
+        "requestedNounIncludes": "叶片",
+        "requestedLabelIncludes": "叶片",
+        "requestedAnchorPhraseIncludes": "尾巴上面",
+        "requestedColorIncludes": "绿",
+        "requestFamily": "leaf",
+        "runtimeShapeClass": "leaf",
+        "requireNonGenericTopPrototype": false
+      }
+    },
+    {
+      "id": "semantic-bottle-color-rescue",
+      "prompt": "做一只小狐狸桌宠，胸前挂一个蓝色香水瓶。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "mockPayload": {
+        "accessoryRequests": [
+          {
+            "requestedLabel": "挂件",
+            "requestedNoun": "挂件",
+            "familyGuess": "generic-ornament",
+            "prototypeCandidates": [
+              {
+                "id": "bottle",
+                "confidence": 0.93
+              }
+            ],
+            "traits": ["rigid", "closed-top", "cylindrical"]
+          }
+        ]
+      },
+      "expect": {
+        "requestedNounIncludes": "香水瓶",
+        "requestedLabelIncludes": "香水瓶",
+        "requestedAnchorPhraseIncludes": "胸前",
+        "requestedColorIncludes": "蓝",
+        "topPrototypeId": "bottle",
+        "requireNonGenericTopPrototype": true
+      }
+    },
+    {
+      "id": "semantic-badge-forehead-rescue",
+      "prompt": "做一只小狐狸桌宠，额头别一个金色校徽。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "mockPayload": {
+        "accessoryRequests": [
+          {
+            "requestedLabel": "装饰",
+            "requestedNoun": "装饰",
+            "familyGuess": "generic-ornament",
+            "prototypeCandidates": [
+              {
+                "id": "flat-badge",
+                "confidence": 0.94
+              }
+            ],
+            "traits": ["rigid", "flat-face"]
+          }
+        ]
+      },
+      "expect": {
+        "requestedNounIncludes": "校徽",
+        "requestedLabelIncludes": "校徽",
+        "requestedAnchorPhraseIncludes": "额头",
+        "topPrototypeId": "flat-badge",
+        "runtimeShapeClass": "badge"
+      }
+    },
+    {
+      "id": "semantic-rocket-right-ear-rescue",
+      "prompt": "做一只小狐狸桌宠，右耳一个橙色小火箭挂件。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "mockPayload": {
+        "accessoryRequests": [
+          {
+            "requestedLabel": "挂件",
+            "requestedNoun": "挂件",
+            "familyGuess": "generic-ornament",
+            "prototypeCandidates": [
+              {
+                "id": "rocket",
+                "confidence": 0.95
+              }
+            ],
+            "traits": ["rigid"]
+          }
+        ]
+      },
+      "expect": {
+        "requestedNounIncludes": "火箭",
+        "requestedLabelIncludes": "火箭",
+        "requestedAnchorPhraseIncludes": "右耳",
+        "requestedColorIncludes": "橙",
+        "topPrototypeId": "rocket",
+        "runtimeShapeClass": "rocket-charm"
+      }
+    },
+    {
+      "id": "semantic-tool-right-ear-rescue",
+      "prompt": "做一只小狐狸桌宠，右耳一个银色扳手挂件。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "mockPayload": {
+        "accessoryRequests": [
+          {
+            "requestedLabel": "挂件",
+            "requestedNoun": "挂件",
+            "familyGuess": "generic-ornament",
+            "prototypeCandidates": [
+              {
+                "id": "tool-head",
+                "confidence": 0.91
+              }
+            ],
+            "traits": ["rigid"]
+          }
+        ]
+      },
+      "expect": {
+        "requestedNounIncludes": "扳手",
+        "requestedLabelIncludes": "扳手",
+        "requestedAnchorPhraseIncludes": "右耳",
+        "requestedColorIncludes": "银",
+        "topPrototypeId": "tool-head",
+        "requireNonGenericTopPrototype": true
+      }
+    },
+    {
+      "id": "semantic-camera-dslr-literal",
+      "prompt": "做一只小狐狸桌宠，胸前挂一个黑色单反相机。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "mockPayload": {
+        "accessoryRequests": [
+          {
+            "requestedLabel": "装饰",
+            "requestedNoun": "装饰",
+            "familyGuess": "generic-ornament",
+            "prototypeCandidates": [
+              {
+                "id": "camera",
+                "confidence": 0.95
+              }
+            ],
+            "traits": ["rigid", "flat-face"]
+          }
+        ]
+      },
+      "expect": {
+        "requestedNounIncludes": "单反",
+        "requestedLabelIncludes": "单反",
+        "requestedAnchorPhraseIncludes": "胸前",
+        "requestedColorIncludes": "黑",
+        "topPrototypeId": "camera",
+        "runtimeShapeClass": "camera-charm"
+      }
+    },
+    {
+      "id": "semantic-boat-canoe-literal",
+      "prompt": "做一只小狐狸桌宠，左耳一个蓝色独木舟挂件。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "mockPayload": {
+        "accessoryRequests": [
+          {
+            "requestedLabel": "挂件",
+            "requestedNoun": "挂件",
+            "familyGuess": "generic-ornament",
+            "prototypeCandidates": [
+              {
+                "id": "boat",
+                "confidence": 0.94
+              }
+            ],
+            "traits": ["rigid"]
+          }
+        ]
+      },
+      "expect": {
+        "requestedNounIncludes": "独木舟",
+        "requestedLabelIncludes": "独木舟",
+        "requestedAnchorPhraseIncludes": "左耳",
+        "requestedColorIncludes": "蓝",
+        "topPrototypeId": "boat",
+        "runtimeShapeClass": "boat-charm"
+      }
+    },
+    {
+      "id": "semantic-flower-ear-literal",
+      "prompt": "做一只小狐狸桌宠，左耳一个绿色小花挂件。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "mockPayload": {
+        "accessoryRequests": [
+          {
+            "requestedLabel": "挂件",
+            "requestedNoun": "挂件",
+            "familyGuess": "generic-ornament",
+            "prototypeCandidates": [
+              {
+                "id": "flower",
+                "confidence": 0.96
+              }
+            ],
+            "traits": ["soft", "ear-safe", "micro-hangable"]
+          }
+        ]
+      },
+      "expect": {
+        "requestedNounIncludes": "小花",
+        "requestedLabelIncludes": "小花",
+        "requestedAnchorPhraseIncludes": "左耳",
+        "requestedColorIncludes": "绿",
+        "topPrototypeId": "flower",
+        "runtimeShapeClass": "flower"
+      }
+    },
+    {
+      "id": "semantic-clover-ear-literal",
+      "prompt": "做一只小狐狸桌宠，右耳一个红色四叶草挂件。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "mockPayload": {
+        "accessoryRequests": [
+          {
+            "requestedLabel": "挂件",
+            "requestedNoun": "挂件",
+            "familyGuess": "generic-ornament",
+            "prototypeCandidates": [
+              {
+                "id": "clover-charm",
+                "confidence": 0.97
+              }
+            ],
+            "traits": ["flat-face", "ear-safe", "micro-hangable"]
+          }
+        ]
+      },
+      "expect": {
+        "requestedNounIncludes": "四叶草",
+        "requestedLabelIncludes": "四叶草",
+        "requestedAnchorPhraseIncludes": "右耳",
+        "requestedColorIncludes": "红",
+        "topPrototypeId": "clover-charm",
+        "runtimeShapeClass": "clover-charm"
+      }
+    }
+  ]
+}

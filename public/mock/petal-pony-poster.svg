@@ -1,0 +1,49 @@
+<svg width="1200" height="1500" viewBox="0 0 1200 1500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1500" fill="#E8D5C4"/>
+  <rect width="1200" height="1500" fill="url(#grain)"/>
+  <circle cx="880" cy="360" r="270" fill="#FFF7F1" fill-opacity="0.72"/>
+  <circle cx="840" cy="380" r="360" fill="url(#glow)"/>
+  <path d="M199 1087C342 929 493 850 654 850C816 850 947 914 1049 1043V1500H199V1087Z" fill="#FFF7F1" fill-opacity="0.55"/>
+  <path d="M472 1021C472 873 566 747 703 706C722 667 760 639 808 639C871 639 922 690 922 753C922 763 921 773 918 783C985 839 1028 923 1028 1017C1028 1189 888 1328 716 1328C544 1328 404 1189 404 1017C404 993 407 969 412 947C375 919 352 877 352 829C352 747 419 680 501 680C558 680 607 712 631 759C665 739 703 728 744 728" fill="#D4A5A5"/>
+  <path d="M579 954C611 899 672 862 742 862C798 862 849 886 884 925C915 920 947 919 980 924C919 854 823 810 716 810C594 810 489 868 429 955C477 934 529 935 579 954Z" fill="#B87D6D" fill-opacity="0.56"/>
+  <ellipse cx="712" cy="1051" rx="187" ry="175" fill="#FFF7F1"/>
+  <ellipse cx="669" cy="1032" rx="132" ry="127" fill="#EFD1D1"/>
+  <ellipse cx="807" cy="1101" rx="106" ry="145" fill="#FFF7F1"/>
+  <ellipse cx="770" cy="1114" rx="78" ry="104" fill="#EFD1D1"/>
+  <ellipse cx="888" cy="970" rx="75" ry="130" fill="#FFF7F1"/>
+  <ellipse cx="669" cy="871" rx="154" ry="154" fill="#FFF7F1"/>
+  <path d="M613 744C628 648 689 579 764 579C789 579 812 588 829 604C871 591 917 603 948 636C987 678 987 746 949 789L934 805C935 819 936 833 936 847C936 978 830 1084 699 1084C568 1084 462 978 462 847C462 723 557 622 680 611C687 608 694 606 702 606" fill="#FFF7F1"/>
+  <path d="M629 635L679 525L744 627" fill="#D4A5A5"/>
+  <path d="M819 632L891 528L912 644" fill="#D4A5A5"/>
+  <path d="M815 664C792 620 764 597 733 597C699 597 668 623 646 675C614 752 574 778 529 810C596 781 650 809 669 854C713 823 751 813 803 821C802 771 822 720 861 680C847 678 831 672 815 664Z" fill="#B87D6D"/>
+  <circle cx="632" cy="834" r="18" fill="#5D2E46"/>
+  <circle cx="804" cy="826" r="18" fill="#5D2E46"/>
+  <circle cx="632" cy="834" r="8" fill="#FFF7F1"/>
+  <circle cx="804" cy="826" r="8" fill="#FFF7F1"/>
+  <path d="M707 926C739 926 765 913 779 891" stroke="#5D2E46" stroke-width="18" stroke-linecap="round"/>
+  <path d="M604 733C589 740 578 752 571 769" stroke="#5D2E46" stroke-width="18" stroke-linecap="round"/>
+  <path d="M779 714C798 723 812 736 822 752" stroke="#5D2E46" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="552" cy="786" r="13" fill="#FFF7F1"/>
+  <circle cx="874" cy="753" r="11" fill="#FFF7F1"/>
+  <path d="M887 339C925 353 963 388 977 436" stroke="#FFF7F1" stroke-width="16" stroke-linecap="round"/>
+  <path d="M993 296C1021 323 1045 367 1051 408" stroke="#FFF7F1" stroke-width="10" stroke-linecap="round"/>
+  <path d="M136 253C193 177 274 142 380 149" stroke="#B87D6D" stroke-opacity="0.28" stroke-width="24" stroke-linecap="round"/>
+  <path d="M101 353C184 297 290 272 419 278" stroke="#B87D6D" stroke-opacity="0.22" stroke-width="12" stroke-linecap="round"/>
+  <text x="119" y="114" fill="#7B4961" font-family="Georgia, serif" font-size="36" letter-spacing="0.2em">PROMPTPET-AR</text>
+  <text x="118" y="228" fill="#5D2E46" font-family="Georgia, serif" font-size="136" font-weight="700">花瓣小马</text>
+  <text x="122" y="298" fill="#7B4961" font-family="Arial, sans-serif" font-size="36">soft toy • desktop pet • mock preview</text>
+  <text x="122" y="1353" fill="#5D2E46" font-family="Arial, sans-serif" font-size="30">Desert Rose mock poster</text>
+  <defs>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(840 380) rotate(90) scale(360)">
+      <stop stop-color="#D4A5A5" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#D4A5A5" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grain" width="140" height="140" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="25" r="1.1" fill="#FFF7F1" fill-opacity="0.25"/>
+      <circle cx="87" cy="38" r="0.9" fill="#FFF7F1" fill-opacity="0.18"/>
+      <circle cx="60" cy="91" r="1.2" fill="#FFF7F1" fill-opacity="0.14"/>
+      <circle cx="121" cy="102" r="1" fill="#FFF7F1" fill-opacity="0.12"/>
+      <circle cx="34" cy="118" r="0.8" fill="#FFF7F1" fill-opacity="0.16"/>
+    </pattern>
+  </defs>
+</svg>

@@ -1,0 +1,657 @@
+{
+  "requiredTools": [
+    "clear_scene",
+    "import_file",
+    "transform_object",
+    "create_camera",
+    "create_material",
+    "assign_material",
+    "configure_render_settings",
+    "render_image",
+    "delete_objects",
+    "export_file"
+  ],
+  "metadata": {
+    "structuredPrompt": "对象: 已支持物种模板变体; 当前物种: {{recipe.archetype}}; 模板: {{recipe.templateVersion}}; 生成模式: {{recipe.generatorMode}}; 风格: {{styleLabel}}; 主题槽位: {{recipe.themeSlot}}; 主题标签: {{recipe.themeLabel}}; 主配饰: {{recipe.accessoryLabel}}; 文本归一化: {{prompt}}; 相机预设: {{recipe.cameraPreset}}; 输出: model.glb + model.usdz + thumbnail.png + metadata.json;",
+    "styleLabel": "{{styleLabel}}",
+    "outputFiles": [
+      "model.glb",
+      "model.usdz",
+      "thumbnail.png",
+      "metadata.json",
+      "adapter-status.json"
+    ],
+    "notes": [
+      "当前结果使用仓库内 {{recipe.templateVersion}} 母体资产导入后做有限参数化变体，主目标是稳定产出同一种已支持物种的小狐狸桌宠。",
+      "prompt 这一轮会先被收敛到主题槽位、配色、小配饰、眼睛气质和尾巴末端效果，不改变物种、角色数量或动作系统，也不重塑母体结构。",
+      "海报渲染会额外导入 fox-base poster stage 资产，正式导出前会删除舞台相机、灯光和地台，保证网页预览、Android AR 和海报缩略图共用同一份正式资产。",
+      "旧的 procedural fox-v1 仍保留在 scripts/blender-mcp-plan.fox-v1.json，可作为手动回退基线。"
+    ]
+  },
+  "steps": [
+    {
+      "tool": "clear_scene",
+      "status": "rendering",
+      "message": "正在清理场景，准备加载 fox-base 模板。",
+      "kwargs": {
+        "clear_objects": true,
+        "clear_materials": true,
+        "clear_textures": true,
+        "keep_cameras": false,
+        "keep_lights": false
+      }
+    },
+    {
+      "tool": "import_file",
+      "status": "rendering",
+      "message": "正在导入 fox-base 小狐狸模板。",
+      "kwargs": {
+        "file_path": "{{recipe.templateAssetFile}}",
+        "file_format": "glb",
+        "apply_transform": true
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "rendering",
+      "message": "正在校准小狐狸母体身体轮廓。",
+      "kwargs": {
+        "object_name": "{{objects.body}}",
+        "scale": "{{recipe.bodyScale}}"
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "rendering",
+      "message": "正在保持小狐狸头身接合稳定。",
+      "kwargs": {
+        "object_name": "{{objects.head}}",
+        "scale": "{{recipe.headScale}}"
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "rendering",
+      "message": "正在调整尾巴体量和蓬感。",
+      "kwargs": {
+        "object_name": "{{objects.tail}}",
+        "scale": "{{recipe.tailScale}}"
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "rendering",
+      "message": "正在补尾巴末端的识别亮点。",
+      "kwargs": {
+        "object_name": "{{objects.tailTip}}",
+        "scale": "{{recipe.tailTipScale}}"
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "rendering",
+      "message": "正在调整眼睛比例。",
+      "kwargs": {
+        "object_name": "{{objects.eyeLeft}}",
+        "scale": "{{recipe.eyeScale}}"
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "rendering",
+      "message": "正在调整眼睛比例。",
+      "kwargs": {
+        "object_name": "{{objects.eyeRight}}",
+        "scale": "{{recipe.eyeScale}}"
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "rendering",
+      "message": "正在摆放铃铛主题件。",
+      "kwargs": {
+        "object_name": "{{objects.accessoryBell}}",
+        "scale": "{{recipe.accessoryScales.accessoryBell}}"
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "rendering",
+      "message": "正在摆放围巾主题件。",
+      "kwargs": {
+        "object_name": "{{objects.accessoryScarf}}",
+        "scale": "{{recipe.accessoryScales.accessoryScarf}}"
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "rendering",
+      "message": "正在摆放小花主题件。",
+      "kwargs": {
+        "object_name": "{{objects.accessoryFlower}}",
+        "scale": "{{recipe.accessoryScales.accessoryFlower}}"
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "rendering",
+      "message": "正在摆放星冠主题件。",
+      "kwargs": {
+        "object_name": "{{objects.accessoryCrown}}",
+        "scale": "{{recipe.accessoryScales.accessoryCrown}}"
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "rendering",
+      "message": "正在摆放吊牌主题件。",
+      "kwargs": {
+        "object_name": "{{objects.accessoryTag}}",
+        "scale": "{{recipe.accessoryScales.accessoryTag}}"
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "rendering",
+      "message": "正在摆放领带主题件。",
+      "kwargs": {
+        "object_name": "{{objects.accessoryTie}}",
+        "scale": "{{recipe.accessoryScales.accessoryTie}}"
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "rendering",
+      "message": "正在摆放徽章主题件。",
+      "kwargs": {
+        "object_name": "{{objects.accessoryBadge}}",
+        "scale": "{{recipe.accessoryScales.accessoryBadge}}"
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "rendering",
+      "message": "正在摆放蝴蝶结主题件。",
+      "kwargs": {
+        "object_name": "{{objects.accessoryBow}}",
+        "scale": "{{recipe.accessoryScales.accessoryBow}}"
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "rendering",
+      "message": "正在摆放吊坠主题件。",
+      "kwargs": {
+        "object_name": "{{objects.accessoryPendant}}",
+        "scale": "{{recipe.accessoryScales.accessoryPendant}}"
+      }
+    },
+    {
+      "tool": "create_material",
+      "status": "rendering",
+      "message": "正在生成模板变体配色。",
+      "kwargs": {
+        "name": "{{materials.body}}",
+        "base_color": "{{palette.bodyColor}}",
+        "metallic": "{{recipe.bodyMaterialMetallic}}",
+        "roughness": "{{recipe.bodyMaterialRoughness}}",
+        "emission_color": "{{palette.bodyColor}}",
+        "emission_strength": "{{recipe.bodyEmissionStrength}}"
+      }
+    },
+    {
+      "tool": "create_material",
+      "status": "rendering",
+      "message": "正在生成模板变体配色。",
+      "kwargs": {
+        "name": "{{materials.detail}}",
+        "base_color": "{{palette.detailColor}}",
+        "roughness": "{{recipe.detailMaterialRoughness}}"
+      }
+    },
+    {
+      "tool": "create_material",
+      "status": "rendering",
+      "message": "正在生成模板变体配色。",
+      "kwargs": {
+        "name": "{{materials.accent}}",
+        "base_color": "{{palette.accentColor}}",
+        "roughness": "{{recipe.accentMaterialRoughness}}",
+        "emission_color": "{{palette.accentColor}}",
+        "emission_strength": "{{recipe.accentEmissionStrength}}"
+      }
+    },
+    {
+      "tool": "create_material",
+      "status": "rendering",
+      "message": "正在生成模板变体配色。",
+      "kwargs": {
+        "name": "{{materials.eye}}",
+        "base_color": "{{palette.eyeColor}}",
+        "roughness": "{{recipe.eyeMaterialRoughness}}",
+        "emission_color": "{{palette.glowColor}}",
+        "emission_strength": "{{recipe.eyeEmissionStrength}}"
+      }
+    },
+    {
+      "tool": "create_material",
+      "status": "rendering",
+      "message": "正在给尾巴末端补发光点缀。",
+      "kwargs": {
+        "name": "{{materials.glow}}",
+        "base_color": "{{palette.glowColor}}",
+        "roughness": "{{recipe.glowMaterialRoughness}}",
+        "emission_color": "{{palette.glowColor}}",
+        "emission_strength": "{{recipe.glowEmissionStrength}}"
+      }
+    },
+    {
+      "tool": "create_material",
+      "status": "rendering",
+      "message": "正在生成主题配饰材质。",
+      "kwargs": {
+        "name": "{{materials.accessory}}",
+        "base_color": "{{palette.accessoryColor}}",
+        "roughness": "{{recipe.accessoryMaterialRoughness}}",
+        "emission_color": "{{palette.accessoryColor}}",
+        "emission_strength": "{{recipe.accessoryEmissionStrength}}"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在把新配色铺回 fox-base 模板。",
+      "kwargs": {
+        "object_name": "{{objects.body}}",
+        "material_name": "{{materials.body}}",
+        "slot_index": 0,
+        "assign_to": "DATA"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在把新配色铺回 fox-base 模板。",
+      "kwargs": {
+        "object_name": "{{objects.head}}",
+        "material_name": "{{materials.body}}",
+        "slot_index": 0,
+        "assign_to": "DATA"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在把新配色铺回 fox-base 模板。",
+      "kwargs": {
+        "object_name": "{{objects.tail}}",
+        "material_name": "{{materials.body}}",
+        "slot_index": 0,
+        "assign_to": "DATA"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在把细节色铺回胸口。",
+      "kwargs": {
+        "object_name": "{{objects.chest}}",
+        "material_name": "{{materials.detail}}",
+        "slot_index": 0,
+        "assign_to": "DATA"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在把细节色铺回嘴套。",
+      "kwargs": {
+        "object_name": "{{objects.muzzle}}",
+        "material_name": "{{materials.detail}}",
+        "slot_index": 0,
+        "assign_to": "DATA"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在补鼻尖材质。",
+      "kwargs": {
+        "object_name": "{{objects.nose}}",
+        "material_name": "{{materials.accent}}",
+        "slot_index": 0,
+        "assign_to": "DATA"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在补眼睛高光。",
+      "kwargs": {
+        "object_name": "{{objects.eyeLeft}}",
+        "material_name": "{{materials.eye}}",
+        "slot_index": 0,
+        "assign_to": "DATA"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在补眼睛高光。",
+      "kwargs": {
+        "object_name": "{{objects.eyeRight}}",
+        "material_name": "{{materials.eye}}",
+        "slot_index": 0,
+        "assign_to": "DATA"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在补尾巴末端发光点缀。",
+      "kwargs": {
+        "object_name": "{{objects.tailTip}}",
+        "material_name": "{{materials.glow}}",
+        "slot_index": 0,
+        "assign_to": "DATA"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在铺配饰材质。",
+      "kwargs": {
+        "object_name": "{{objects.accessoryBell}}",
+        "material_name": "{{materials.accessory}}",
+        "slot_index": 0,
+        "assign_to": "DATA"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在铺配饰材质。",
+      "kwargs": {
+        "object_name": "{{objects.accessoryScarf}}",
+        "material_name": "{{materials.accessory}}",
+        "slot_index": 0,
+        "assign_to": "DATA"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在铺配饰材质。",
+      "kwargs": {
+        "object_name": "{{objects.accessoryFlower}}",
+        "material_name": "{{materials.accessory}}",
+        "slot_index": 0,
+        "assign_to": "DATA"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在铺配饰材质。",
+      "kwargs": {
+        "object_name": "{{objects.accessoryCrown}}",
+        "material_name": "{{materials.accessory}}",
+        "slot_index": 0,
+        "assign_to": "DATA"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在铺配饰材质。",
+      "kwargs": {
+        "object_name": "{{objects.accessoryTag}}",
+        "material_name": "{{materials.accessory}}",
+        "slot_index": 0,
+        "assign_to": "DATA"
+      }
+    },
+    {
+      "tool": "import_file",
+      "status": "rendering",
+      "message": "正在导入 fox-base 海报舞台。",
+      "kwargs": {
+        "file_path": "{{recipe.stageAssetFile}}",
+        "file_format": "glb",
+        "apply_transform": true
+      }
+    },
+    {
+      "tool": "create_camera",
+      "status": "rendering",
+      "message": "正在创建 fox-base 海报渲染相机。",
+      "kwargs": {
+        "name": "{{stage.renderCamera}}",
+        "location": "{{recipe.stageCameraLocation}}",
+        "rotation": "{{recipe.stageCameraRotation}}",
+        "camera_type": "PERSP",
+        "focal_length": "{{recipe.stageCameraFocalLength}}",
+        "sensor_width": 36,
+        "sensor_height": 24,
+        "sensor_fit": "AUTO",
+        "clip_start": 0.01,
+        "clip_end": 100,
+        "passepartout_alpha": 1
+      }
+    },
+    {
+      "tool": "configure_render_settings",
+      "status": "rendering",
+      "message": "正在对齐 fox-base 海报渲染参数。",
+      "kwargs": {
+        "engine": "BLENDER_EEVEE",
+        "samples": 64,
+        "resolution_x": 1400,
+        "resolution_y": 1400,
+        "resolution_percentage": 100,
+        "file_format": "PNG",
+        "color_mode": "RGBA",
+        "transparent": false,
+        "use_denoising": false,
+        "use_motion_blur": false,
+        "use_bloom": false,
+        "exposure": "{{recipe.renderExposure}}",
+        "gamma": "{{recipe.renderGamma}}",
+        "use_compositing": false,
+        "use_sequencer": false
+      }
+    },
+    {
+      "tool": "render_image",
+      "status": "exporting",
+      "message": "正在渲染 fox-base 海报。",
+      "kwargs": {
+        "output_path": "{{artifacts.posterFile}}",
+        "return_base64": false
+      }
+    },
+    {
+      "tool": "delete_objects",
+      "status": "exporting",
+      "message": "正在移除海报舞台，准备导出正式 GLB。",
+      "kwargs": {
+        "object_names": [
+          "{{stage.plane}}",
+          "{{stage.importedCamera}}",
+          "{{stage.renderCamera}}",
+          "{{stage.sun}}",
+          "{{stage.keyLight}}",
+          "{{stage.rimLight}}"
+        ],
+        "delete_data": true,
+        "delete_hierarchy": false,
+        "confirm": true
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "exporting",
+      "message": "正在校准 Android 桌宠默认朝向和体量。",
+      "kwargs": {
+        "object_name": "{{objects.body}}",
+        "rotation": "{{recipe.exportFacingRotation}}",
+        "scale": "{{recipe.exportScale}}",
+        "delta": true
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "exporting",
+      "message": "正在校准 Android 桌宠默认朝向和体量。",
+      "kwargs": {
+        "object_name": "{{objects.chest}}",
+        "rotation": "{{recipe.exportFacingRotation}}",
+        "scale": "{{recipe.exportScale}}",
+        "delta": true
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "exporting",
+      "message": "正在校准 Android 桌宠默认朝向和体量。",
+      "kwargs": {
+        "object_name": "{{objects.head}}",
+        "rotation": "{{recipe.exportFacingRotation}}",
+        "scale": "{{recipe.exportScale}}",
+        "delta": true
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "exporting",
+      "message": "正在校准 Android 桌宠默认朝向和体量。",
+      "kwargs": {
+        "object_name": "{{objects.muzzle}}",
+        "rotation": "{{recipe.exportFacingRotation}}",
+        "scale": "{{recipe.exportScale}}",
+        "delta": true
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "exporting",
+      "message": "正在校准 Android 桌宠默认朝向和体量。",
+      "kwargs": {
+        "object_name": "{{objects.nose}}",
+        "rotation": "{{recipe.exportFacingRotation}}",
+        "scale": "{{recipe.exportScale}}",
+        "delta": true
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "exporting",
+      "message": "正在校准 Android 桌宠默认朝向和体量。",
+      "kwargs": {
+        "object_name": "{{objects.tail}}",
+        "rotation": "{{recipe.exportFacingRotation}}",
+        "scale": "{{recipe.exportScale}}",
+        "delta": true
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "exporting",
+      "message": "正在校准 Android 桌宠默认朝向和体量。",
+      "kwargs": {
+        "object_name": "{{objects.tailTip}}",
+        "rotation": "{{recipe.exportFacingRotation}}",
+        "scale": "{{recipe.exportScale}}",
+        "delta": true
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "exporting",
+      "message": "正在校准 Android 桌宠默认朝向和体量。",
+      "kwargs": {
+        "object_name": "{{objects.eyeLeft}}",
+        "rotation": "{{recipe.exportFacingRotation}}",
+        "scale": "{{recipe.exportScale}}",
+        "delta": true
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "exporting",
+      "message": "正在校准 Android 桌宠默认朝向和体量。",
+      "kwargs": {
+        "object_name": "{{objects.eyeRight}}",
+        "rotation": "{{recipe.exportFacingRotation}}",
+        "scale": "{{recipe.exportScale}}",
+        "delta": true
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "exporting",
+      "message": "正在校准 Android 桌宠默认朝向和体量。",
+      "kwargs": {
+        "object_name": "{{objects.accessoryBell}}",
+        "rotation": "{{recipe.exportFacingRotation}}",
+        "scale": "{{recipe.exportScale}}",
+        "delta": true
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "exporting",
+      "message": "正在校准 Android 桌宠默认朝向和体量。",
+      "kwargs": {
+        "object_name": "{{objects.accessoryScarf}}",
+        "rotation": "{{recipe.exportFacingRotation}}",
+        "scale": "{{recipe.exportScale}}",
+        "delta": true
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "exporting",
+      "message": "正在校准 Android 桌宠默认朝向和体量。",
+      "kwargs": {
+        "object_name": "{{objects.accessoryFlower}}",
+        "rotation": "{{recipe.exportFacingRotation}}",
+        "scale": "{{recipe.exportScale}}",
+        "delta": true
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "exporting",
+      "message": "正在校准 Android 桌宠默认朝向和体量。",
+      "kwargs": {
+        "object_name": "{{objects.accessoryCrown}}",
+        "rotation": "{{recipe.exportFacingRotation}}",
+        "scale": "{{recipe.exportScale}}",
+        "delta": true
+      }
+    },
+    {
+      "tool": "transform_object",
+      "status": "exporting",
+      "message": "正在校准 Android 桌宠默认朝向和体量。",
+      "kwargs": {
+        "object_name": "{{objects.accessoryTag}}",
+        "rotation": "{{recipe.exportFacingRotation}}",
+        "scale": "{{recipe.exportScale}}",
+        "delta": true
+      }
+    },
+    {
+      "tool": "export_file",
+      "status": "exporting",
+      "message": "正在导出 fox-base 正式 GLB。",
+      "kwargs": {
+        "file_path": "{{artifacts.modelFile}}",
+        "file_format": "glb",
+        "selected_only": false,
+        "apply_modifiers": true
+      }
+    }
+  ]
+}

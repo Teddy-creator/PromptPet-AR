@@ -1,0 +1,80 @@
+{
+  "assetContractFile": "assets/fox-base/fox-base-v8.contract.json",
+  "speciesKey": "fox",
+  "supportedSpecies": ["fox"],
+  "displayName": "教程风小狐狸桌宠",
+  "templateVersion": "fox-base-v8",
+  "generatorMode": "template-variant",
+  "productCopy": {
+    "supportedSpeciesLine": "支持物种定制，目前支持 fox。",
+    "scopeLine": "一句话影响的是已支持物种的风格与细节，不是任意动物自由建模。"
+  },
+  "sourceBlendFile": "assets/fox-base/source/fox-base-v8.blend",
+  "exportFiles": {
+    "modelFile": "assets/fox-base/export/fox-base-v8.glb",
+    "usdFile": "assets/fox-base/export/fox-base-v8.usd",
+    "usdzFile": "assets/fox-base/export/fox-base-v8.usdz",
+    "posterFile": "assets/fox-base/export/fox-base-v8-poster.png",
+    "stageFile": "assets/fox-base/export/fox-base-poster-stage-v8.glb"
+  },
+  "demoFiles": {
+    "modelPath": "public/demo/fox-base-v8.glb",
+    "usdzPath": "public/demo/fox-base-v8.usdz",
+    "posterPath": "public/demo/fox-base-v8-poster.png",
+    "modelUrl": "/demo/fox-base-v8.glb",
+    "usdzUrl": "/demo/fox-base-v8.usdz",
+    "posterUrl": "/demo/fox-base-v8-poster.png"
+  },
+  "recipeDefaults": {
+    "archetype": "fox",
+    "cameraPreset": "pet-poster-v8",
+    "posePreset": "fox-idle-stand-v1",
+    "arPlacementPreset": "android-tabletop-v1",
+    "stageCameraLocation": [0.38, 0.74, 0.68],
+    "stageCameraRotation": [60.6, 0, 151.0],
+    "stageCameraFocalLength": 82,
+    "renderExposure": -0.35,
+    "renderGamma": 1
+  },
+  "posterRender": {
+    "resolutionX": 1400,
+    "resolutionY": 1400,
+    "samples": 64,
+    "fileFormat": "PNG",
+    "colorMode": "RGBA",
+    "transparent": false
+  },
+  "objects": {
+    "body": "FoxBase_Body",
+    "chest": "FoxBase_Chest",
+    "head": "FoxBase_Head",
+    "muzzle": "FoxBase_Muzzle",
+    "nose": "FoxBase_Nose",
+    "tail": "FoxBase_Tail",
+    "tailTip": "FoxBase_TailTip",
+    "eyeLeft": "FoxBase_EyeLeft",
+    "eyeRight": "FoxBase_EyeRight"
+  },
+  "stageObjects": {
+    "plane": "FoxBase_StagePlane",
+    "importedCamera": "FoxBase_StageCam",
+    "renderCamera": "FoxBase_RenderCam",
+    "sun": "FoxBase_StageSun",
+    "keyLight": "FoxBase_StageKey",
+    "rimLight": "FoxBase_StageRim"
+  },
+  "sourceMaterials": {
+    "body": "FoxBase_Body_Mat",
+    "face": "FoxBase_Face_Mat",
+    "accent": "FoxBase_Accent_Mat",
+    "eye": "FoxBase_Eye_Mat",
+    "glow": "FoxBase_Glow_Mat",
+    "stage": "FoxBase_StagePlane_Mat"
+  },
+  "promptControls": [
+    "主色 / 辅色",
+    "眼睛大小",
+    "尾巴蓬感",
+    "发光气质"
+  ]
+}

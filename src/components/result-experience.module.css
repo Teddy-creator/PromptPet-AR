@@ -1,0 +1,363 @@
+.page {
+  padding: 1.5rem;
+}
+
+.frame {
+  width: min(1220px, 100%);
+  margin: 0 auto;
+  padding: clamp(2rem, 3vw, 3.2rem);
+  border: 1px solid rgba(43, 37, 32, 0.08);
+  border-radius: 2rem;
+  background: rgba(250, 247, 240, 0.92);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero {
+  display: grid;
+  gap: 2rem;
+}
+
+.heroHeader {
+  display: grid;
+  gap: 1.3rem;
+}
+
+.heroIntro {
+  display: grid;
+  gap: 1rem;
+}
+
+.brandPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  width: fit-content;
+  min-height: 2.5rem;
+  padding: 0 1rem;
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  background: rgba(244, 237, 228, 0.84);
+}
+
+.brandMark {
+  color: var(--soft-burgundy);
+  font-size: 0.92rem;
+}
+
+.title {
+  font-size: clamp(3rem, 7vw, 5rem);
+}
+
+.promptLine {
+  max-width: 46rem;
+  font-size: 1.06rem;
+  line-height: 1.7;
+  color: var(--ink-muted);
+}
+
+.promptLine span {
+  color: var(--dark-ink);
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.badges span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.35rem;
+  padding: 0 0.95rem;
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  background: rgba(244, 237, 228, 0.8);
+  color: rgba(43, 37, 32, 0.86);
+}
+
+.statusBadge {
+  border-color: transparent;
+}
+
+.statusReady {
+  background: rgba(139, 155, 126, 0.16);
+  color: #56644c;
+}
+
+.statusPending {
+  background: rgba(212, 165, 116, 0.16);
+  color: #8c6541;
+}
+
+.statusFailed {
+  background: rgba(160, 97, 106, 0.14);
+  color: var(--soft-burgundy-deep);
+}
+
+.actionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.primaryAction,
+.secondaryAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 3.5rem;
+  padding: 0 1.2rem;
+  border-radius: 1.1rem;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.actionIcon {
+  font-size: 0.92rem;
+  line-height: 1;
+}
+
+.primaryAction {
+  border: 0;
+  background: var(--soft-burgundy);
+  color: var(--cream);
+  box-shadow: 0 16px 36px rgba(160, 97, 106, 0.18);
+}
+
+.secondaryAction {
+  border: 1px solid var(--line-soft);
+  background: rgba(250, 247, 240, 0.76);
+  color: var(--dark-ink);
+}
+
+.primaryAction:hover,
+.secondaryAction:hover {
+  transform: translateY(-1px);
+}
+
+.primaryAction:disabled,
+.secondaryAction:disabled {
+  cursor: wait;
+  transform: none;
+  opacity: 0.72;
+}
+
+.statusLine {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--ink-muted);
+}
+
+.previewCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+  background: linear-gradient(180deg, rgba(244, 237, 228, 0.98), rgba(232, 221, 208, 0.78));
+  box-shadow: var(--shadow-lifted);
+}
+
+.previewGlow {
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 999px;
+  background: rgba(212, 165, 116, 0.22);
+  filter: blur(52px);
+}
+
+.previewImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.25;
+  object-fit: cover;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.metricCard,
+.fulfillmentColumn,
+.requestCard {
+  padding: 1.25rem 1.3rem;
+  border: 1px solid var(--line-soft);
+  border-radius: 1.4rem;
+  background: rgba(244, 237, 228, 0.7);
+}
+
+.metricCard {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.metricCard h2,
+.sectionHeader h2 {
+  font-size: 1.25rem;
+}
+
+.metricCard p,
+.sectionHeader p,
+.requestCard p {
+  line-height: 1.68;
+  color: var(--ink-muted);
+}
+
+.fulfillmentSection,
+.requestSection,
+.runtimeSection {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.8rem;
+}
+
+.sectionHeader {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.fulfillmentColumns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.runtimeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.fulfillmentColumn {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.runtimeCard {
+  display: grid;
+  gap: 0.55rem;
+  padding: 1.25rem 1.3rem;
+  border: 1px solid var(--line-soft);
+  border-radius: 1.4rem;
+  background: rgba(244, 237, 228, 0.7);
+}
+
+.runtimeCard h3 {
+  font-size: 1rem;
+}
+
+.runtimeCard p {
+  line-height: 1.68;
+  color: var(--ink-muted);
+}
+
+.fulfillmentColumn h3 {
+  font-size: 1rem;
+}
+
+.fulfillmentColumn ul {
+  display: grid;
+  gap: 0.7rem;
+  list-style: none;
+}
+
+.fulfillmentColumn li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  line-height: 1.6;
+}
+
+.fulfillmentColumn li svg {
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+.itemIcon {
+  margin-top: 0.08rem;
+  flex-shrink: 0;
+}
+
+.fulfillmentColumn:nth-child(1) .itemIcon {
+  color: var(--moss);
+}
+
+.fulfillmentColumn:nth-child(2) .itemIcon {
+  color: var(--muted-gold);
+}
+
+.fulfillmentColumn:nth-child(3) .itemIcon {
+  color: var(--warm-gray);
+}
+
+.requestGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.requestCard {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.requestHead {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.requestHead strong {
+  font-size: 1rem;
+}
+
+.requestHead span {
+  min-height: 2rem;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(160, 97, 106, 0.12);
+  color: var(--soft-burgundy-deep);
+  font-size: 0.82rem;
+}
+
+.emptyState {
+  width: min(760px, calc(100vw - 3rem));
+  margin: 8rem auto 0;
+  padding: 2rem;
+  border: 1px solid var(--line-soft);
+  border-radius: 1.6rem;
+  background: rgba(250, 247, 240, 0.92);
+  display: grid;
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .page {
+    padding: 1rem;
+  }
+
+  .frame {
+    padding: 1.35rem;
+    border-radius: 1.5rem;
+  }
+
+  .metricsGrid,
+  .runtimeGrid,
+  .fulfillmentColumns,
+  .requestGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .previewImage {
+    aspect-ratio: 0.95;
+  }
+}

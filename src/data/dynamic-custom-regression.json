@@ -1,0 +1,1166 @@
+{
+  "goldenPrompts": [
+    {
+      "id": "gold-runtime-strawberry-clover-flower",
+      "prompt": "做一只草莓甜点主题的小狐狸桌宠，莓果粉和奶油白配色，左耳旁边有一朵绿色小花，右耳朵有个红色的四叶草。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "themeSlot": "strawberry-sweet",
+        "paletteMode": "dual-tone",
+        "bodyColor": "莓果粉",
+        "secondaryColor": "奶油白",
+        "accessoryColorAbsent": true,
+        "requestedAccessoryCount": 2,
+        "executedAccessoryCount": 2,
+        "accessoryRequestLabelsIncludes": ["小花", "四叶草"],
+        "accessoryFamiliesIncludes": ["flower", "clover-charm"],
+        "accessoryFamiliesExcludes": ["generic-ornament"],
+        "runtimeDesignSourceModesIncludes": ["canonical-blueprint"],
+        "geometrySourceModesIncludes": ["canonical-blueprint"],
+        "requestedAccessoriesIncludes": ["左耳 · 小花", "右耳 · 四叶草"],
+        "executedAccessoriesIncludes": ["左耳 · 小花", "右耳 · 四叶草"],
+        "runtimeGeneratedAccessoriesIncludes": ["左耳 · 小花", "右耳 · 四叶草"],
+        "executedIncludes": ["主体细节颜色：奶油白", "配件颜色：绿色", "配件颜色：大红色"]
+      }
+    },
+    {
+      "id": "gold-runtime-neon-orange-fish-cloud",
+      "prompt": "做一只小狐狸桌宠，主体是荧光橙，右耳一个银色小鱼耳饰，胸前一个褐色云朵挂饰。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "bodyColor": "荧光橙",
+        "accessoryColorAbsent": true,
+        "requestedAccessoryCount": 2,
+        "executedAccessoryCount": 2,
+        "requestedAccessoriesIncludes": ["右耳 · 小鱼挂饰", "胸前 · 云朵挂饰"],
+        "executedAccessoriesIncludes": ["右耳 · 小鱼挂饰", "胸前 · 云朵挂饰"],
+        "runtimeGeneratedAccessoriesIncludes": ["右耳 · 小鱼挂饰", "胸前 · 云朵挂饰"],
+        "executedIncludes": ["配件颜色：银灰色", "配件颜色：褐色"]
+      }
+    },
+    {
+      "id": "gold-runtime-magenta-tie-cloud",
+      "prompt": "做一只紫红色的狐狸，其中左耳有一个绿色领带，右耳朵有一个黑色的云朵形状的挂饰。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "bodyColor": "紫红色",
+        "accessoryColorAbsent": true,
+        "requestedAccessoryCount": 2,
+        "executedAccessoryCount": 2,
+        "removedDefaultAccessoriesIncludes": ["小围巾"],
+        "requestedAccessoriesIncludes": ["左耳 · 小领带", "右耳 · 云朵挂饰"],
+        "executedAccessoriesIncludes": ["左耳 · 小领带", "右耳 · 云朵挂饰"],
+        "runtimeGeneratedAccessoriesIncludes": ["左耳 · 小领带", "右耳 · 云朵挂饰"],
+        "executedIncludes": ["配件颜色：绿色", "配件颜色：黑色"]
+      }
+    },
+    {
+      "id": "gold-runtime-berry-fish",
+      "prompt": "做一只小狐狸桌宠，红绿色配色，胸前挂一个紫色的草莓挂饰，左耳朵挂一个蓝色的小鱼挂饰。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "bodyColor": "大红色",
+        "accessoryColorAbsent": true,
+        "requestedAccessoryCount": 2,
+        "executedAccessoryCount": 2,
+        "removedDefaultAccessoriesIncludes": ["耳边小花"],
+        "requestedAccessoriesIncludes": ["胸前 · 草莓挂饰", "左耳 · 小鱼挂饰"],
+        "executedAccessoriesIncludes": ["胸前 · 草莓挂饰", "左耳 · 小鱼挂饰"],
+        "runtimeGeneratedAccessoriesIncludes": ["胸前 · 草莓挂饰", "左耳 · 小鱼挂饰"],
+        "executedIncludes": ["配件颜色：薰衣草紫", "配件颜色：蓝色"]
+      }
+    },
+    {
+      "id": "gold-runtime-neon-earring-cloud",
+      "prompt": "做一只小狐狸桌宠，主体是荧光绿，右耳一个银色耳环，胸前一个黑色云朵挂饰。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "bodyColor": "荧光绿",
+        "accessoryColorAbsent": true,
+        "requestedAccessoryCount": 2,
+        "executedAccessoryCount": 2,
+        "removedDefaultAccessoriesIncludes": ["星冠"],
+        "requestedAccessoriesIncludes": ["右耳 · 耳环", "胸前 · 云朵挂饰"],
+        "executedAccessoriesIncludes": ["右耳 · 耳环", "胸前 · 云朵挂饰"],
+        "runtimeGeneratedAccessoriesIncludes": ["右耳 · 耳环", "胸前 · 云朵挂饰"],
+        "executedIncludes": ["配件颜色：银灰色", "配件颜色：黑色"]
+      }
+    },
+    {
+      "id": "gold-runtime-only-fish",
+      "prompt": "不要任何配饰，除了左耳一个绿色小鱼挂饰。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "accessoryColor": "绿色",
+        "requestedAccessoryCount": 1,
+        "executedAccessoryCount": 1,
+        "removedDefaultAccessoriesIncludes": ["小围巾"],
+        "requestedAccessoriesIncludes": ["左耳 · 小鱼挂饰"],
+        "executedAccessoriesIncludes": ["左耳 · 小鱼挂饰"],
+        "runtimeGeneratedAccessoriesIncludes": ["左耳 · 小鱼挂饰"],
+        "executedIncludes": ["移除默认配饰：小围巾", "配件颜色：绿色"]
+      }
+    },
+    {
+      "id": "gold-runtime-open-color-candle-ear",
+      "prompt": "做一只小狐狸桌宠，主体是朱褐色，左耳一个红色小蜡烛。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "bodyColor": "朱褐色",
+        "accessoryColor": "大红色",
+        "requestedAccessoryCount": 1,
+        "executedAccessoryCount": 1,
+        "removedDefaultAccessoriesIncludes": ["小吊牌"],
+        "requestedAccessoriesIncludes": ["左耳 · 小蜡烛"],
+        "executedAccessoriesIncludes": ["左耳 · 小蜡烛"],
+        "runtimeGeneratedAccessoriesIncludes": ["左耳 · 小蜡烛"],
+        "executedIncludes": ["配件颜色：大红色"]
+      }
+    },
+    {
+      "id": "gold-runtime-open-color-back-head-cloud",
+      "prompt": "做一只小狐狸桌宠，主体是灰褐色，头后面一个黑色云朵挂饰。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "bodyColor": "灰褐色",
+        "accessoryColor": "黑色",
+        "requestedAccessoryCount": 1,
+        "executedAccessoryCount": 1,
+        "removedDefaultAccessoriesIncludes": ["小吊牌"],
+        "requestedAccessoriesIncludes": ["头后面 · 云朵挂饰"],
+        "executedAccessoriesIncludes": ["头后面 · 云朵挂饰"],
+        "runtimeGeneratedAccessoriesIncludes": ["头后面 · 云朵挂饰"],
+        "executedIncludes": ["配件颜色：黑色"]
+      }
+    },
+    {
+      "id": "gold-runtime-tail-top-fish",
+      "prompt": "做一只小狐狸桌宠，主体是荧光橙，尾巴上面一个蓝色小鱼挂饰。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "bodyColor": "荧光橙",
+        "accessoryColor": "蓝色",
+        "requestedAccessoryCount": 1,
+        "executedAccessoryCount": 1,
+        "removedDefaultAccessoriesIncludes": ["小围巾"],
+        "requestedAccessoriesIncludes": ["尾巴上面 · 小鱼挂饰"],
+        "executedAccessoriesIncludes": ["尾巴上面 · 小鱼挂饰"],
+        "runtimeGeneratedAccessoriesIncludes": ["尾巴上面 · 小鱼挂饰"],
+        "executedIncludes": ["配件颜色：蓝色"]
+      }
+    },
+    {
+      "id": "gold-runtime-back-head-candle-exception",
+      "prompt": "不要任何配饰，除了头后面一个银色蜡烛挂饰。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "accessoryColor": "银灰色",
+        "requestedAccessoryCount": 1,
+        "executedAccessoryCount": 1,
+        "removedDefaultAccessoriesIncludes": ["小吊牌"],
+        "requestedAccessoriesIncludes": ["头后面 · 小蜡烛"],
+        "executedAccessoriesIncludes": ["头后面 · 小蜡烛"],
+        "runtimeGeneratedAccessoriesIncludes": ["头后面 · 小蜡烛"]
+      }
+    },
+    {
+      "id": "gold-runtime-open-multi-anchor-candle-leaf",
+      "prompt": "灰褐色狐狸，左耳红色小蜡烛，尾巴上面绿色叶片挂饰。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "bodyColor": "灰褐色",
+        "accessoryColorAbsent": true,
+        "requestedAccessoryCount": 2,
+        "executedAccessoryCount": 2,
+        "removedDefaultAccessoriesIncludes": ["小吊牌"],
+        "requestedAccessoriesIncludes": ["左耳 · 小蜡烛", "尾巴上面 · 叶片装饰"],
+        "executedAccessoriesIncludes": ["左耳 · 小蜡烛", "尾巴上面 · 叶片装饰"],
+        "runtimeGeneratedAccessoriesIncludes": ["左耳 · 小蜡烛", "尾巴上面 · 叶片装饰"],
+        "executedIncludes": ["配件颜色：大红色", "配件颜色：绿色"]
+      }
+    },
+    {
+      "id": "gold-runtime-open-noun-boat",
+      "prompt": "不要任何配饰，除了右耳一个蓝色小船挂饰。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "accessoryColor": "蓝色",
+        "requestedAccessoryCount": 1,
+        "executedAccessoryCount": 1,
+        "accessoryRequestNounsIncludes": ["小船"],
+        "runtimeDesignRequestedNounsIncludes": ["小船"],
+        "runtimeDesignArchetypesIncludes": ["vehicle-charm"],
+        "runtimeShapeClassesIncludes": ["boat-charm"],
+        "runtimeDesignSourceModesIncludes": ["cached-reference"],
+        "referenceIdsIncludes": ["ref-boat-charm"],
+        "blueprintFamiliesIncludes": ["hard-surface-vehicle"],
+        "geometryVariantIdsIncludes": ["boat-hull-sail-upright"],
+        "geometrySourceModesIncludes": ["cached-reference"],
+        "geometryPrimarySilhouettesIncludes": ["longitudinal-hull"],
+        "structuralBlueprintSilhouetteTemplatesIncludes": ["boat-hull-mast-sail"],
+        "structuralBlueprintSilhouetteBlockRolesIncludes": ["root-mass", "support-stem", "sail-plane", "attachment-loop"],
+        "structuralBlueprintAssemblyRelationsIncludes": ["rooted-mass", "supported-upright", "free-hang"],
+        "structuralBlueprintReadOrderTargetsIncludes": ["boat-hull", "boat-mast", "boat-sail"],
+        "structuralBlueprintCriticalViewGoalsIncludes": ["boat-hull", "mast 必须 rooted 到 hull", "first read"],
+        "structuralBlueprintSpanTargetPartIdsIncludes": ["boat-hull", "boat-sail"],
+        "structuralBlueprintDepthTargetPartIdsIncludes": ["boat-hull", "boat-sail"],
+        "structuralBlueprintAttachmentAnchorPartIdsIncludes": ["boat-mast", "boat-sail", "hang-slot"],
+        "structuralBlueprintKeepoutPartIdsIncludes": ["boat-mast", "boat-sail", "hang-slot"],
+        "structuralBlueprintDominantContoursIncludes": ["upright-hull-sail"],
+        "structuralBlueprintSideDepthProfilesIncludes": ["balanced"],
+        "structuralBlueprintDominantSpanOwnersIncludes": ["boat-hull"],
+        "runtimeDesignCriticalPartsIncludes": ["boat-hull", "boat-mast", "boat-sail"],
+        "runtimeDesignNegativeLookalikesIncludes": ["generic token"],
+        "nounDesignBriefCountAtLeast": 1,
+        "partGraphCountAtLeast": 1,
+        "partGraphRootIdsIncludes": ["boat-hull"],
+        "partGraphAttachmentIdsIncludes": ["hang-slot"],
+        "partGraphEdgesIncludes": [
+          { "parentPartId": "boat-hull", "childPartId": "boat-mast", "mountFace": "centerline", "edgeConstraint": "supported-branch" },
+          { "parentPartId": "boat-mast", "childPartId": "boat-sail", "mountFace": "side", "edgeConstraint": "supported-branch" }
+        ],
+        "requestedAccessoriesIncludes": ["右耳 · 小船挂饰"]
+      }
+    },
+    {
+      "id": "gold-runtime-open-noun-rocket",
+      "prompt": "做一只小狐狸桌宠，左耳一个黑色火箭挂饰。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "accessoryColor": "黑色",
+        "requestedAccessoryCount": 1,
+        "executedAccessoryCount": 1,
+        "accessoryRequestNounsIncludes": ["火箭"],
+        "runtimeDesignRequestedNounsIncludes": ["火箭"],
+        "runtimeDesignArchetypesIncludes": ["vehicle-charm"],
+        "runtimeShapeClassesIncludes": ["rocket-charm"],
+        "referenceIdsIncludes": ["ref-rocket-compact"],
+        "blueprintFamiliesIncludes": ["hard-surface-vehicle"],
+        "geometryVariantIdsIncludes": ["vehicle-forward-spine"],
+        "runtimeDesignCriticalPartsIncludes": ["rocket-body", "rocket-nose", "rocket-fin", "rocket-nozzle"],
+        "nounDesignBriefCountAtLeast": 1,
+        "partGraphCountAtLeast": 1,
+        "partGraphRootIdsIncludes": ["rocket-body"],
+        "partGraphAttachmentIdsIncludes": ["hang-slot"],
+        "requestedAccessoriesIncludes": ["左耳 · 火箭挂饰"]
+      }
+    },
+    {
+      "id": "gold-runtime-open-noun-camera",
+      "prompt": "做一只小狐狸桌宠，左耳一个银色相机挂件。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "accessoryColor": "银灰色",
+        "requestedAccessoryCount": 1,
+        "executedAccessoryCount": 1,
+        "accessoryRequestNounsIncludes": ["相机"],
+        "runtimeDesignRequestedNounsIncludes": ["相机"],
+        "runtimeDesignArchetypesIncludes": ["device-charm"],
+        "runtimeShapeClassesIncludes": ["camera-charm"],
+        "runtimeDesignSourceModesIncludes": ["cached-reference"],
+        "referenceIdsIncludes": ["ref-camera-compact"],
+        "blueprintFamiliesIncludes": ["hard-surface-device"],
+        "geometryVariantIdsIncludes": ["camera-body-lens-forward"],
+        "geometrySourceModesIncludes": ["cached-reference"],
+        "geometryPartScaleMaxByPart": {
+          "device-body": [0.93, 0.12, 0.57],
+          "camera-lens": [0.45, 0.31, 0.29],
+          "camera-top": [0.09, 0.03, 0.05],
+          "hang-slot": [0.003, 0.003, 0.002]
+        },
+        "geometryPrimarySilhouettesIncludes": ["compact-device"],
+        "structuralBlueprintSilhouetteTemplatesIncludes": ["camera-front-lens"],
+        "structuralBlueprintSilhouetteBlockRolesIncludes": ["root-mass", "front-protrusion", "top-cluster", "attachment-loop"],
+        "structuralBlueprintAssemblyRelationsIncludes": ["rooted-mass", "front-mounted", "top-mounted", "free-hang"],
+        "structuralBlueprintReadOrderTargetsIncludes": ["device-body", "camera-lens", "camera-top"],
+        "structuralBlueprintCriticalViewGoalsIncludes": ["device-body", "camera-lens", "top cluster"],
+        "structuralBlueprintSpanTargetPartIdsIncludes": ["device-body", "camera-lens"],
+        "structuralBlueprintDepthTargetPartIdsIncludes": ["device-body", "camera-lens"],
+        "structuralBlueprintAttachmentAnchorPartIdsIncludes": ["camera-lens", "camera-top", "hang-slot"],
+        "structuralBlueprintKeepoutPartIdsIncludes": ["camera-top", "hang-slot"],
+        "structuralBlueprintDominantContoursIncludes": ["body-lens-forward"],
+        "structuralBlueprintSideDepthProfilesIncludes": ["front-loaded"],
+        "structuralBlueprintDominantSpanOwnersIncludes": ["device-body"],
+        "runtimeDesignCriticalPartsIncludes": ["device-body", "camera-lens", "camera-top"],
+        "nounDesignBriefCountAtLeast": 1,
+        "partGraphCountAtLeast": 1,
+        "partGraphRootIdsIncludes": ["device-body"],
+        "partGraphAttachmentIdsIncludes": ["hang-slot"],
+        "partGraphEdgesIncludes": [
+          { "parentPartId": "device-body", "childPartId": "camera-lens", "mountFace": "front", "edgeConstraint": "embedded-front" },
+          { "parentPartId": "device-body", "childPartId": "camera-top", "mountFace": "top-right", "edgeConstraint": "flush-mount" }
+        ],
+        "requestedAccessoriesIncludes": ["左耳 · 相机挂件"]
+      }
+    },
+    {
+      "id": "gold-runtime-open-noun-camera-cream-chest",
+      "prompt": "做一只胸前挂着小相机、奶油色、适合桌面摆放的小狐狸桌宠",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "themeSlot": "cream-toy",
+        "requestedAccessoryCount": 1,
+        "executedAccessoryCount": 1,
+        "accessoryRequestLabelsIncludes": ["小相机"],
+        "accessoryRequestNounsIncludes": ["小相机"],
+        "accessoryFamiliesExcludes": ["dessert", "dessert-hang"],
+        "runtimeDesignRequestedNounsIncludes": ["小相机"],
+        "runtimeDesignArchetypesIncludes": ["device-charm"],
+        "runtimeShapeClassesIncludes": ["camera-charm"],
+        "runtimeDesignSourceModesIncludes": ["cached-reference"],
+        "referenceIdsIncludes": ["ref-camera-compact"],
+        "blueprintFamiliesIncludes": ["hard-surface-device"],
+        "geometryVariantIdsIncludes": ["camera-body-lens-forward"],
+        "geometrySourceModesIncludes": ["cached-reference"],
+        "runtimeDesignCriticalPartsIncludes": ["device-body", "camera-lens", "camera-top"],
+        "requestedAccessoriesIncludes": ["胸前 · 小相机"],
+        "executedAccessoriesIncludes": ["胸前 · 小相机"],
+        "runtimeGeneratedAccessoriesIncludes": ["胸前 · 小相机"]
+      }
+    },
+    {
+      "id": "gold-runtime-open-noun-phone-cloud",
+      "prompt": "草莓甜点主题，左耳是橙色的手机装饰，右耳是黑色的云朵挂件。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "themeSlot": "strawberry-sweet",
+        "accessoryColorAbsent": true,
+        "requestedAccessoryCount": 2,
+        "executedAccessoryCount": 2,
+        "accessoryRequestNounsIncludes": ["手机", "云朵"],
+        "runtimeDesignRequestedNounsIncludes": ["手机", "云朵"],
+        "runtimeDesignArchetypesIncludes": ["device-charm"],
+        "runtimeShapeClassesIncludes": ["device-generic-charm", "cloud"],
+        "runtimeDesignSourceModesIncludes": ["cached-reference", "canonical-blueprint"],
+        "referenceIdsIncludes": ["ref-phone-compact"],
+        "blueprintFamiliesIncludes": ["hard-surface-device"],
+        "geometryVariantIdsIncludes": ["device-screen-forward"],
+        "geometrySourceModesIncludes": ["cached-reference", "canonical-blueprint"],
+        "runtimeDesignCriticalPartsIncludes": ["device-body", "screen-face", "hang-slot", "center-puff"],
+        "nounDesignBriefCountAtLeast": 2,
+        "partGraphCountAtLeast": 2,
+        "requestedAccessoriesIncludes": ["左耳 · 手机装饰", "右耳 · 云朵挂饰"]
+      }
+    },
+    {
+      "id": "gold-night-glow-green-crown",
+      "prompt": "做一只夜灯主题的小狐狸桌宠，狐狸是橙色的，额头戴绿色星冠。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "themeSlot": "night-glow",
+        "bodyColor": "橙色",
+        "accessoryColor": "绿色",
+        "requestedAccessoriesIncludes": ["额头 · 星冠"],
+        "executedAccessoriesIncludes": ["额头 · 星冠"]
+      }
+    },
+    {
+      "id": "gold-red-scarf-no-bell",
+      "prompt": "做一只幸运守护主题的小狐狸桌宠，大红色配色，不要铃铛，换成小围巾。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "themeSlot": "lucky-charm",
+        "bodyColor": "大红色",
+        "requestedAccessoriesIncludes": ["胸前 · 小围巾"],
+        "executedIncludes": ["移除默认配饰：小铃铛", "替换为支持配饰：小围巾"]
+      }
+    },
+    {
+      "id": "gold-orange-fox-green-crown",
+      "prompt": "夜灯主题，橘红色狐狸，绿色的星冠，尾巴末端再亮一点。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "themeSlot": "night-glow",
+        "bodyColor": "橘红色",
+        "accessoryColor": "绿色",
+        "requestedAccessoriesIncludes": ["额头 · 星冠"],
+        "executedIncludes": ["材质发光：发光更强"]
+      }
+    },
+    {
+      "id": "gold-forest-experimental",
+      "prompt": "做一只草莓甜点主题的小狐狸桌宠，莓果粉和奶油白配色，左耳旁边有一个森林形状的小装饰，装饰是紫色的。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "themeSlot": "strawberry-sweet",
+        "bodyColor": "莓果粉",
+        "accessoryColor": "薰衣草紫",
+        "requestedAccessoriesIncludes": ["左耳 · 森林形装饰"],
+        "executedAccessoriesIncludes": ["左耳 · 森林形装饰"]
+      }
+    },
+    {
+      "id": "gold-forest-safe",
+      "prompt": "做一只草莓甜点主题的小狐狸桌宠，莓果粉和奶油白配色，左耳旁边有一个森林形状的小装饰，装饰是紫色的。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "themeSlot": "strawberry-sweet",
+        "bodyColor": "莓果粉",
+        "accessoryColor": "薰衣草紫",
+        "requestedAccessoriesIncludes": ["左耳 · 森林形装饰"],
+        "approximatedIncludes": ["配件形状：森林形装饰 -> 耳边小花"]
+      }
+    },
+    {
+      "id": "gold-dessert-chest",
+      "prompt": "做一只奶油玩具风小狐狸，胸前挂一个草莓甜点装饰，装饰是粉色的。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "themeSlot": "strawberry-sweet",
+        "accessoryColor": "玫瑰粉",
+        "requestedAccessoriesIncludes": ["胸前 · 甜点装饰"],
+        "executedAccessoriesIncludes": ["胸前 · 甜点装饰"]
+      }
+    },
+    {
+      "id": "gold-leaf-ear",
+      "prompt": "森林巡游主题，小狐狸主体是橙色，左耳别一个叶片装饰，装饰是绿色。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "themeSlot": "forest-scout",
+        "bodyColor": "橙色",
+        "accessoryColor": "绿色",
+        "requestedAccessoriesIncludes": ["左耳 · 叶片装饰"],
+        "executedAccessoriesIncludes": ["左耳 · 叶片装饰"]
+      }
+    },
+    {
+      "id": "gold-mushroom-ear",
+      "prompt": "森林巡游主题，左耳边放一个蘑菇装饰，装饰是橙色。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "themeSlot": "forest-scout",
+        "accessoryColor": "橙色",
+        "requestedAccessoriesIncludes": ["左耳 · 蘑菇装饰"],
+        "executedAccessoriesIncludes": ["左耳 · 蘑菇装饰"]
+      }
+    },
+    {
+      "id": "gold-mixed-accessory-colors",
+      "prompt": "做一只小狐狸桌宠，渐变橘红色配色，胸前挂一个绿色的蝴蝶结，左耳挂一个紫色的小铃铛。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "themeSlot": "forest-scout",
+        "bodyColor": "橘红色",
+        "accessoryColorAbsent": true,
+        "requestedAccessoriesIncludes": ["胸前 · 蝴蝶结", "左耳 · 小铃铛"],
+        "executedAccessoriesIncludes": ["胸前 · 蝴蝶结", "左耳 · 小铃铛"],
+        "runtimeGeneratedAccessoriesIncludes": ["胸前 · 蝴蝶结", "左耳 · 小铃铛"],
+        "executedIncludes": ["配件颜色：绿色", "配件颜色：薰衣草紫"]
+      }
+    },
+    {
+      "id": "gold-star-ear",
+      "prompt": "梦幻发光风，右耳旁边有一个绿色星形装饰，狐狸主体保持橘红色。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "themeSlot": "night-glow",
+        "bodyColor": "橘红色",
+        "accessoryColor": "绿色",
+        "requestedAccessoriesIncludes": ["右耳 · 星形装饰"],
+        "executedAccessoriesIncludes": ["右耳 · 星形装饰"]
+      }
+    },
+    {
+      "id": "gold-flower-default",
+      "prompt": "奶油玩具主题，左耳戴一朵紫色小花，主体是奶油橙。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "themeSlot": "cream-toy",
+        "accessoryColor": "薰衣草紫",
+        "requestedAccessoriesIncludes": ["左耳 · 小花"],
+        "executedAccessoriesIncludes": ["左耳 · 小花"]
+      }
+    },
+    {
+      "id": "gold-tag-chest",
+      "prompt": "给这只小狐狸挂一个绿色小吊牌，狐狸主体是橘红色。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "bodyColor": "橘红色",
+        "accessoryColor": "绿色",
+        "requestedAccessoriesIncludes": ["胸前 · 小吊牌"],
+        "executedAccessoriesIncludes": ["胸前 · 小吊牌"]
+      }
+    },
+    {
+      "id": "gold-badge-chest",
+      "prompt": "做一只森林巡游主题的小狐狸桌宠，胸前加一个小徽章，徽章是绿色的。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "themeSlot": "forest-scout",
+        "accessoryColor": "绿色",
+        "requestedAccessoriesIncludes": ["胸前 · 小徽章"],
+        "executedAccessoriesIncludes": ["胸前 · 小徽章"]
+      }
+    },
+    {
+      "id": "gold-bow-ear",
+      "prompt": "梦幻发光风小狐狸，左耳戴一个紫色蝴蝶结。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "accessoryColor": "薰衣草紫",
+        "requestedAccessoriesIncludes": ["左耳 · 蝴蝶结"],
+        "executedAccessoriesIncludes": ["左耳 · 蝴蝶结"]
+      }
+    },
+    {
+      "id": "gold-pendant-chest",
+      "prompt": "奶油玩具风，胸前挂一个蓝白色的小吊坠，主体是橘色。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "bodyColor": "橙色",
+        "accessoryColor": "蓝白色",
+        "requestedAccessoriesIncludes": ["胸前 · 小吊坠"],
+        "executedAccessoriesIncludes": ["胸前 · 小吊坠"]
+      }
+    },
+    {
+      "id": "gold-glow-down",
+      "prompt": "夜灯主题的小狐狸，橙色主体，不要太亮，发光弱一点。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "themeSlot": "night-glow",
+        "bodyColor": "橙色",
+        "executedIncludes": ["材质发光：发光更弱"]
+      }
+    },
+    {
+      "id": "gold-glow-up",
+      "prompt": "夜灯主题的小狐狸，橙色主体，尾巴尖发光更强一些。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "themeSlot": "night-glow",
+        "bodyColor": "橙色",
+        "executedIncludes": ["材质发光：发光更强"]
+      }
+    },
+    {
+      "id": "gold-no-accessory",
+      "prompt": "幸运守护主题，但是不要任何配饰，主体大红色。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "themeSlot": "lucky-charm",
+        "bodyColor": "大红色",
+        "executedIncludes": ["移除默认配饰：小铃铛"]
+      }
+    },
+    {
+      "id": "gold-night-glow-candy-exception",
+      "prompt": "夜灯主题，大红色狐狸，什么配饰都不要，除了左右耳各一个紫色糖果挂件。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "themeSlot": "night-glow",
+        "bodyColor": "大红色",
+        "accessoryColor": "薰衣草紫",
+        "requestedAccessoryCount": 2,
+        "executedAccessoryCount": 2,
+        "removedDefaultAccessoriesIncludes": ["星冠"],
+        "approximatedAccessoryFamiliesIncludes": ["candy"],
+        "requestedAccessoriesIncludes": ["左耳 · 糖果挂件", "右耳 · 糖果挂件"],
+        "approximatedIncludes": ["配件形状：糖果挂件 -> 蝴蝶结"]
+      }
+    },
+    {
+      "id": "gold-strawberry-dual-accessory-no-theme-leak",
+      "prompt": "草莓甜点主题，左耳森林形装饰，右耳糖果挂件，装饰都是紫色。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "themeSlot": "strawberry-sweet",
+        "accessoryColor": "薰衣草紫",
+        "requestedAccessoryCount": 2,
+        "executedAccessoryCount": 2,
+        "removedDefaultAccessoriesIncludes": ["耳边小花"],
+        "requestedAccessoriesIncludes": ["左耳 · 森林形装饰", "右耳 · 糖果挂件"],
+        "executedAccessoriesIncludes": ["左耳 · 森林形装饰", "右耳 · 糖果挂件"]
+      }
+    },
+    {
+      "id": "gold-night-glow-keep-only-crown",
+      "prompt": "夜灯主题，橘红色狐狸，绿色星冠，但不要其他任何装饰。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "themeSlot": "night-glow",
+        "bodyColor": "橘红色",
+        "accessoryColor": "绿色",
+        "requestedAccessoryCount": 1,
+        "executedAccessoryCount": 1,
+        "removedDefaultAccessoriesIncludes": ["星冠"],
+        "requestedAccessoriesIncludes": ["额头 · 星冠"],
+        "executedAccessoriesIncludes": ["额头 · 星冠"]
+      }
+    },
+    {
+      "id": "gold-forest-dual-leaf-no-theme-leak",
+      "prompt": "森林巡游主题，左右耳各一个叶片挂件，主体奶油橙。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "themeSlot": "forest-scout",
+        "requestedAccessoryCount": 2,
+        "executedAccessoryCount": 2,
+        "removedDefaultAccessoriesIncludes": ["小围巾"],
+        "requestedAccessoriesIncludes": ["左耳 · 叶片装饰", "右耳 · 叶片装饰"],
+        "executedAccessoriesIncludes": ["左耳 · 叶片装饰", "右耳 · 叶片装饰"]
+      }
+    },
+    {
+      "id": "gold-forehead-star",
+      "prompt": "给小狐狸额头加一个紫色星形装饰，主体是橙色。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "bodyColor": "橙色",
+        "accessoryColor": "薰衣草紫",
+        "requestedAccessoriesIncludes": ["额头 · 星形装饰"],
+        "executedAccessoriesIncludes": ["额头 · 星形装饰"]
+      }
+    },
+    {
+      "id": "gold-forest-tag-fallback",
+      "prompt": "胸前挂一个森林形状的小装饰，装饰是绿色的。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "accessoryColor": "绿色",
+        "requestedAccessoriesIncludes": ["胸前 · 森林形装饰"],
+        "approximatedIncludes": ["配件形状：森林形装饰 -> 小吊牌"]
+      }
+    },
+    {
+      "id": "gold-dessert-safe",
+      "prompt": "做一只草莓甜点主题的小狐狸，胸前挂一个甜点装饰，装饰是粉色。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "themeSlot": "strawberry-sweet",
+        "accessoryColor": "玫瑰粉",
+        "requestedAccessoriesIncludes": ["胸前 · 甜点装饰"],
+        "approximatedIncludes": ["配件形状：甜点装饰 -> 小吊牌"]
+      }
+    },
+    {
+      "id": "gold-orange-body-purple-accessory",
+      "prompt": "橘红色的小狐狸，装饰是紫色的星冠。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "bodyColor": "橘红色",
+        "accessoryColor": "薰衣草紫",
+        "requestedAccessoriesIncludes": ["额头 · 星冠"]
+      }
+    },
+    {
+      "id": "gold-green-body-red-bow",
+      "prompt": "森林巡游主题，狐狸主体是绿色，左耳戴一个大红色蝴蝶结。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "themeSlot": "forest-scout",
+        "bodyColor": "绿色",
+        "accessoryColor": "大红色",
+        "requestedAccessoriesIncludes": ["左耳 · 蝴蝶结"]
+      }
+    },
+    {
+      "id": "gold-red-body-no-bell-tie",
+      "prompt": "幸运主题的小狐狸，大红色，不要铃铛，胸前换成一个小领带。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "themeSlot": "lucky-charm",
+        "bodyColor": "大红色",
+        "requestedAccessoriesIncludes": ["胸前 · 小领带"],
+        "executedIncludes": ["移除默认配饰：小铃铛", "替换为支持配饰：小领带"]
+      }
+    },
+    {
+      "id": "gold-night-orange-green-ear-star",
+      "prompt": "夜灯主题，橙色狐狸，左耳有一个绿色星形装饰。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "themeSlot": "night-glow",
+        "bodyColor": "橙色",
+        "accessoryColor": "绿色",
+        "requestedAccessoriesIncludes": ["左耳 · 星形装饰"]
+      }
+    },
+    {
+      "id": "gold-runtime-natural-green-necklace-earring",
+      "prompt": "做一只小狐狸桌宠，身体是荧光绿配色地，同时要脖子上挂一个小项链，右耳朵搞一个耳环。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "bodyColor": "荧光绿",
+        "requestedAccessoryCount": 2,
+        "executedAccessoryCount": 2,
+        "removedDefaultAccessoriesIncludes": ["小吊牌"],
+        "requestedAccessoriesIncludes": ["胸前 · 小项链", "右耳 · 耳环"],
+        "executedAccessoriesIncludes": ["胸前 · 小项链", "右耳 · 耳环"],
+        "runtimeGeneratedAccessoriesIncludes": ["胸前 · 小项链", "右耳 · 耳环"]
+      }
+    },
+    {
+      "id": "gold-runtime-natural-earring-exception",
+      "prompt": "做一只奶油玩具风小狐狸，不要任何配饰，除了右耳一个银灰色耳环。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "accessoryColor": "银灰色",
+        "requestedAccessoryCount": 1,
+        "executedAccessoryCount": 1,
+        "removedDefaultAccessoriesIncludes": ["小吊牌"],
+        "requestedAccessoriesIncludes": ["右耳 · 耳环"],
+        "executedAccessoriesIncludes": ["右耳 · 耳环"],
+        "runtimeGeneratedAccessoriesIncludes": ["右耳 · 耳环"]
+      }
+    },
+    {
+      "id": "gold-runtime-natural-double-earring",
+      "prompt": "亮橙色的小狐狸，左右耳各一个荧光粉小耳环。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "bodyColor": "亮橙色",
+        "accessoryColor": "荧光粉",
+        "requestedAccessoryCount": 2,
+        "executedAccessoryCount": 2,
+        "requestedAccessoriesIncludes": ["左耳 · 耳环", "右耳 · 耳环"],
+        "executedAccessoriesIncludes": ["左耳 · 耳环", "右耳 · 耳环"],
+        "runtimeGeneratedAccessoriesIncludes": ["左耳 · 耳环", "右耳 · 耳环"]
+      }
+    },
+    {
+      "id": "gold-runtime-open-noun-phone-cloud",
+      "prompt": "草莓甜点主题，左耳是橙色的手机装饰，右耳是黑色的云朵挂件。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "themeSlot": "strawberry-sweet",
+        "requestedAccessoryCount": 2,
+        "executedAccessoryCount": 2,
+        "accessoryRequestLabelsIncludes": ["手机", "云朵挂饰"],
+        "accessoryRequestNounsIncludes": ["手机", "云朵"],
+        "runtimeDesignRequestedNounsIncludes": ["手机", "云朵"],
+        "runtimeDesignArchetypesIncludes": ["device-charm"],
+        "runtimeShapeClassesIncludes": ["device-generic-charm", "cloud"],
+        "referenceIdsIncludes": ["ref-phone-compact"],
+        "blueprintFamiliesIncludes": ["hard-surface-device"],
+        "geometryVariantIdsIncludes": ["device-screen-forward"],
+        "runtimeDesignCriticalPartsIncludes": ["device-body", "screen-face"],
+        "requestedAccessoriesIncludes": ["左耳 · 手机", "右耳 · 云朵挂饰"]
+      }
+    },
+    {
+      "id": "gold-runtime-open-noun-rocket",
+      "prompt": "做一只小狐狸桌宠，左耳一个黑色火箭挂饰。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "accessoryColor": "黑色",
+        "requestedAccessoryCount": 1,
+        "executedAccessoryCount": 1,
+        "accessoryRequestLabelsIncludes": ["火箭"],
+        "accessoryRequestNounsIncludes": ["火箭"],
+        "runtimeDesignRequestedNounsIncludes": ["火箭"],
+        "runtimeDesignArchetypesIncludes": ["vehicle-charm"],
+        "runtimeShapeClassesIncludes": ["rocket-charm"],
+        "referenceIdsIncludes": ["ref-rocket-compact"],
+        "blueprintFamiliesIncludes": ["hard-surface-vehicle"],
+        "geometryVariantIdsIncludes": ["vehicle-forward-spine"],
+        "runtimeDesignCriticalPartsIncludes": ["rocket-body", "rocket-nose", "rocket-fin", "rocket-nozzle"],
+        "partGraphRootIdsIncludes": ["rocket-body"],
+        "partGraphAttachmentIdsIncludes": ["hang-slot"],
+        "requestedAccessoriesIncludes": ["左耳 · 火箭"]
+      }
+    },
+    {
+      "id": "gold-runtime-open-noun-camera",
+      "prompt": "做一只小狐狸桌宠，左耳一个银色相机挂件。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "accessoryColor": "银灰色",
+        "requestedAccessoryCount": 1,
+        "executedAccessoryCount": 1,
+        "accessoryRequestLabelsIncludes": ["相机"],
+        "accessoryRequestNounsIncludes": ["相机"],
+        "runtimeDesignRequestedNounsIncludes": ["相机"],
+        "runtimeDesignArchetypesIncludes": ["device-charm"],
+        "runtimeShapeClassesIncludes": ["camera-charm"],
+        "referenceIdsIncludes": ["ref-camera-compact"],
+        "blueprintFamiliesIncludes": ["hard-surface-device"],
+        "geometryVariantIdsIncludes": ["camera-body-lens-forward"],
+        "geometryPartScaleMaxByPart": {
+          "device-body": [0.93, 0.12, 0.57],
+          "camera-lens": [0.45, 0.31, 0.29],
+          "camera-top": [0.09, 0.03, 0.05],
+          "hang-slot": [0.003, 0.003, 0.002]
+        },
+        "structuralBlueprintSilhouetteTemplatesIncludes": ["camera-front-lens"],
+        "structuralBlueprintSpanTargetPartIdsIncludes": ["device-body", "camera-lens"],
+        "runtimeDesignCriticalPartsIncludes": ["device-body", "camera-lens"],
+        "partGraphRootIdsIncludes": ["device-body"],
+        "partGraphAttachmentIdsIncludes": ["hang-slot"],
+        "requestedAccessoriesIncludes": ["左耳 · 相机"]
+      }
+    },
+    {
+      "id": "gold-runtime-open-noun-boat-exception",
+      "prompt": "不要任何配饰，除了右耳一个蓝色小船挂饰。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "accessoryColor": "蓝色",
+        "requestedAccessoryCount": 1,
+        "executedAccessoryCount": 1,
+        "accessoryRequestLabelsIncludes": ["小船"],
+        "accessoryRequestNounsIncludes": ["小船"],
+        "runtimeDesignRequestedNounsIncludes": ["小船"],
+        "runtimeDesignArchetypesIncludes": ["vehicle-charm"],
+        "runtimeShapeClassesIncludes": ["boat-charm"],
+        "referenceIdsIncludes": ["ref-boat-charm"],
+        "blueprintFamiliesIncludes": ["hard-surface-vehicle"],
+        "geometryVariantIdsIncludes": ["boat-hull-sail-upright"],
+        "structuralBlueprintSilhouetteTemplatesIncludes": ["boat-hull-mast-sail"],
+        "structuralBlueprintSpanTargetPartIdsIncludes": ["boat-hull", "boat-sail"],
+        "runtimeDesignCriticalPartsIncludes": ["boat-hull", "boat-sail"],
+        "partGraphRootIdsIncludes": ["boat-hull"],
+        "partGraphAttachmentIdsIncludes": ["hang-slot"],
+        "removedDefaultAccessoriesIncludes": ["小吊牌"],
+        "requestedAccessoriesIncludes": ["右耳 · 小船"]
+      }
+    },
+    {
+      "id": "gold-runtime-known-noun-fish-reference",
+      "prompt": "做一只小狐狸桌宠，左耳一个蓝色小鱼挂饰。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "accessoryColor": "蓝色",
+        "requestedAccessoryCount": 1,
+        "executedAccessoryCount": 1,
+        "accessoryRequestLabelsIncludes": ["小鱼挂饰"],
+        "accessoryRequestNounsIncludes": ["小鱼"],
+        "accessoryFamiliesIncludes": ["fish-charm"],
+        "runtimeDesignRequestedNounsIncludes": ["小鱼"],
+        "runtimeShapeClassesIncludes": ["fish-charm"],
+        "runtimeDesignSourceModesIncludes": ["canonical-blueprint"],
+        "geometrySourceModesIncludes": ["canonical-blueprint"],
+        "geometryPrimarySilhouettesIncludes": ["fish-body"],
+        "partGraphEdgesIncludes": [
+          { "parentPartId": "body", "childPartId": "tail", "mountFace": "rear", "edgeConstraint": "side-balance" }
+        ],
+        "requestedAccessoriesIncludes": ["左耳 · 小鱼挂饰"],
+        "executedAccessoriesIncludes": ["左耳 · 小鱼挂饰"]
+      }
+    }
+  ],
+  "conflictPrompts": [
+    {
+      "id": "conflict-body-vs-accessory-color",
+      "prompt": "橘红色狐狸，绿色星冠。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "bodyColor": "橘红色",
+        "accessoryColor": "绿色"
+      }
+    },
+    {
+      "id": "conflict-body-vs-ear-color",
+      "prompt": "橙色小狐狸，左耳旁边的花是紫色。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "bodyColor": "橙色",
+        "accessoryColor": "薰衣草紫"
+      }
+    },
+    {
+      "id": "conflict-body-vs-tag-color",
+      "prompt": "大红色狐狸，吊牌是绿色。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "bodyColor": "大红色",
+        "accessoryColor": "绿色"
+      }
+    },
+    {
+      "id": "conflict-theme-vs-body-color",
+      "prompt": "夜灯主题，但狐狸主体必须是橙色，不要紫色主体。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "themeSlot": "night-glow",
+        "bodyColor": "橙色"
+      }
+    },
+    {
+      "id": "conflict-no-bell",
+      "prompt": "幸运主题，不要铃铛。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "executedIncludes": ["移除默认配饰：小铃铛"]
+      }
+    },
+    {
+      "id": "conflict-no-accessory-vs-theme-default",
+      "prompt": "幸运主题，但是无配饰。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "executedIncludes": ["移除默认配饰：小铃铛"]
+      }
+    },
+    {
+      "id": "conflict-unsupported-species",
+      "prompt": "做一只猫咪桌宠，绿色装饰。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "unsupportedIncludes": ["超范围：换物种"]
+      }
+    },
+    {
+      "id": "conflict-scene-request",
+      "prompt": "做一只森林狐狸，并且把树木和蘑菇场景也一起生成。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "unsupportedIncludes": ["超范围：场景搭建"]
+      }
+    },
+    {
+      "id": "conflict-forest-safe-approx",
+      "prompt": "左耳边一个森林形状的小装饰，装饰是紫色。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "accessoryColor": "薰衣草紫",
+        "approximatedIncludes": ["配件形状：森林形装饰 -> 耳边小花"]
+      }
+    },
+    {
+      "id": "conflict-forest-exp-implemented",
+      "prompt": "左耳边一个森林形状的小装饰，装饰是紫色。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "accessoryColor": "薰衣草紫",
+        "executedAccessoriesIncludes": ["左耳 · 森林形装饰"]
+      }
+    },
+    {
+      "id": "conflict-dessert-safe-approx",
+      "prompt": "胸前挂一个甜点装饰，装饰是粉色。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "accessoryColor": "玫瑰粉",
+        "approximatedIncludes": ["配件形状：甜点装饰 -> 小吊牌"]
+      }
+    },
+    {
+      "id": "conflict-dessert-exp-implemented",
+      "prompt": "胸前挂一个甜点装饰，装饰是粉色。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "accessoryColor": "玫瑰粉",
+        "executedAccessoriesIncludes": ["胸前 · 甜点装饰"]
+      }
+    },
+    {
+      "id": "conflict-leaf-right-ear",
+      "prompt": "右耳边一个绿色叶片装饰，狐狸主体是橙色。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "bodyColor": "橙色",
+        "accessoryColor": "绿色",
+        "requestedAccessoriesIncludes": ["右耳 · 叶片装饰"]
+      }
+    },
+    {
+      "id": "conflict-crown-vs-star",
+      "prompt": "绿色星冠，不要额外耳边装饰。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "accessoryColor": "绿色",
+        "requestedAccessoriesIncludes": ["额头 · 星冠"]
+      }
+    },
+    {
+      "id": "conflict-random-addon-word",
+      "prompt": "右耳旁边有一个奇异森林徽记，装饰是绿色。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "accessoryColor": "绿色",
+        "requestedAccessoriesIncludes": ["右耳 · 森林形装饰"]
+      }
+    },
+    {
+      "id": "conflict-local-color-no-global-pollution",
+      "prompt": "狐狸主体是橙色，胸前甜点装饰是紫色。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "safe-overlay",
+      "expect": {
+        "bodyColor": "橙色",
+        "accessoryColor": "薰衣草紫"
+      }
+    },
+    {
+      "id": "conflict-natural-body-vs-earring-color",
+      "prompt": "荧光绿狐狸，右耳朵搞一个银灰色耳环。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "bodyColor": "荧光绿",
+        "accessoryColor": "银灰色",
+        "requestedAccessoriesIncludes": ["右耳 · 耳环"]
+      }
+    },
+    {
+      "id": "conflict-natural-body-vs-scarf-color",
+      "prompt": "一只戴黑色围巾的紫色小狐狸，左耳多有一个黄色的小花",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "bodyColor": "薰衣草紫",
+        "requestedAccessoryCount": 2,
+        "accessoryRequestLabelsIncludes": ["小围巾", "小花"],
+        "accessoryRequestNounsIncludes": ["小围巾", "小花"],
+        "accessoryRequestColorsIncludes": ["小围巾:黑色", "小花:黄色"],
+        "requestedAccessoriesIncludes": ["胸前 · 小围巾", "左耳 · 小花"],
+        "runtimeDesignRequestedNounsIncludes": ["小花"]
+      }
+    },
+    {
+      "id": "conflict-natural-no-accessory-except-earring",
+      "prompt": "不要任何配饰，除了右耳一个银灰色耳环。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "requestedAccessoryCount": 1,
+        "executedAccessoryCount": 1,
+        "removedDefaultAccessoriesIncludes": ["小吊牌"],
+        "requestedAccessoriesIncludes": ["右耳 · 耳环"]
+      }
+    }
+  ]
+}

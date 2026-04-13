@@ -1,0 +1,580 @@
+{
+  "requiredTools": [
+    "clear_scene",
+    "create_mesh_object",
+    "add_modifier",
+    "apply_modifier",
+    "create_material",
+    "assign_material",
+    "set_optimal_camera_for_all",
+    "render_image",
+    "export_file"
+  ],
+  "metadata": {
+    "styleLabel": "{{styleLabel}}",
+    "structuredPrompt": "对象: 固定小狐狸桌宠; 模板: {{recipe.version}}; 风格: {{styleLabel}}; 文本归一化: {{prompt}}; 相机预设: {{recipe.cameraPreset}}; 输出: model.glb + model.usdz + thumbnail.png + metadata.json;",
+    "outputFiles": [
+      "model.glb",
+      "model.usdz",
+      "thumbnail.png",
+      "metadata.json",
+      "adapter-status.json"
+    ],
+    "notes": [
+      "当前结果使用固定小狐狸模板 fox-v1 生成，第一版重点验证稳定可读的桌面宠物轮廓。",
+      "prompt 这一轮主要影响配色、气质说明和少量比例偏好，不开放自由物种切换。"
+    ]
+  },
+  "steps": [
+    {
+      "tool": "clear_scene",
+      "status": "rendering",
+      "message": "正在清理 Blender 场景。",
+      "kwargs": {
+        "clear_objects": true,
+        "clear_materials": true,
+        "clear_textures": true,
+        "clear_animations": false,
+        "clear_node_groups": false,
+        "clear_worlds": false,
+        "keep_cameras": true,
+        "keep_lights": true
+      }
+    },
+    {
+      "tool": "create_mesh_object",
+      "status": "rendering",
+      "message": "正在搭建小狐狸身体。",
+      "kwargs": {
+        "primitive_type": "{{recipe.bodyPrimitive}}",
+        "size": "{{recipe.bodySize}}",
+        "location": "{{recipe.bodyLocation}}",
+        "rotation": [0, 0, 0],
+        "scale": "{{recipe.bodyScale}}",
+        "segments": "{{recipe.sphereSegments}}",
+        "rings": "{{recipe.sphereRings}}",
+        "ico_subdivisions": "{{recipe.icoSubdivisions}}",
+        "name": "{{objects.body}}"
+      }
+    },
+    {
+      "tool": "create_mesh_object",
+      "status": "rendering",
+      "message": "正在搭建小狐狸头部。",
+      "kwargs": {
+        "primitive_type": "{{recipe.headPrimitive}}",
+        "size": "{{recipe.headSize}}",
+        "location": "{{recipe.headLocation}}",
+        "rotation": [0, 0, 0],
+        "scale": "{{recipe.headScale}}",
+        "segments": "{{recipe.sphereSegments}}",
+        "rings": "{{recipe.sphereRings}}",
+        "ico_subdivisions": "{{recipe.icoSubdivisions}}",
+        "name": "{{objects.head}}"
+      }
+    },
+    {
+      "tool": "create_mesh_object",
+      "status": "rendering",
+      "message": "正在补出小狐狸鼻口轮廓。",
+      "kwargs": {
+        "primitive_type": "{{recipe.muzzlePrimitive}}",
+        "size": "{{recipe.muzzleSize}}",
+        "location": "{{recipe.muzzleLocation}}",
+        "rotation": "{{recipe.muzzleRotation}}",
+        "scale": "{{recipe.muzzleScale}}",
+        "segments": "{{recipe.sphereSegments}}",
+        "rings": "{{recipe.sphereRings}}",
+        "vertices": "{{recipe.coneVertices}}",
+        "name": "{{objects.muzzle}}"
+      }
+    },
+    {
+      "tool": "create_mesh_object",
+      "status": "rendering",
+      "message": "正在创建左耳。",
+      "kwargs": {
+        "primitive_type": "cone",
+        "size": "{{recipe.earSize}}",
+        "location": "{{recipe.earLeftLocation}}",
+        "rotation": "{{recipe.earLeftRotation}}",
+        "scale": "{{recipe.earScale}}",
+        "vertices": "{{recipe.coneVertices}}",
+        "name": "{{objects.earLeft}}"
+      }
+    },
+    {
+      "tool": "create_mesh_object",
+      "status": "rendering",
+      "message": "正在创建右耳。",
+      "kwargs": {
+        "primitive_type": "cone",
+        "size": "{{recipe.earSize}}",
+        "location": "{{recipe.earRightLocation}}",
+        "rotation": "{{recipe.earRightRotation}}",
+        "scale": "{{recipe.earScale}}",
+        "vertices": "{{recipe.coneVertices}}",
+        "name": "{{objects.earRight}}"
+      }
+    },
+    {
+      "tool": "create_mesh_object",
+      "status": "rendering",
+      "message": "正在拉出尾巴轮廓。",
+      "kwargs": {
+        "primitive_type": "cone",
+        "size": "{{recipe.tailSize}}",
+        "location": "{{recipe.tailLocation}}",
+        "rotation": "{{recipe.tailRotation}}",
+        "scale": "{{recipe.tailScale}}",
+        "vertices": "{{recipe.coneVertices}}",
+        "name": "{{objects.tail}}"
+      }
+    },
+    {
+      "tool": "create_mesh_object",
+      "status": "rendering",
+      "message": "正在补尾巴末端细节。",
+      "kwargs": {
+        "primitive_type": "sphere",
+        "size": "{{recipe.tailTipSize}}",
+        "location": "{{recipe.tailTipLocation}}",
+        "rotation": [0, 0, 0],
+        "segments": "{{recipe.sphereSegments}}",
+        "rings": "{{recipe.sphereRings}}",
+        "name": "{{objects.tailTip}}"
+      }
+    },
+    {
+      "tool": "create_mesh_object",
+      "status": "rendering",
+      "message": "正在摆好前腿。",
+      "kwargs": {
+        "primitive_type": "cylinder",
+        "size": "{{recipe.pawSize}}",
+        "location": "{{recipe.pawFrontLeftLocation}}",
+        "rotation": [0, 0, 0],
+        "scale": "{{recipe.pawScale}}",
+        "vertices": "{{recipe.cylinderVertices}}",
+        "name": "{{objects.pawFrontLeft}}"
+      }
+    },
+    {
+      "tool": "create_mesh_object",
+      "status": "rendering",
+      "message": "正在摆好前腿。",
+      "kwargs": {
+        "primitive_type": "cylinder",
+        "size": "{{recipe.pawSize}}",
+        "location": "{{recipe.pawFrontRightLocation}}",
+        "rotation": [0, 0, 0],
+        "scale": "{{recipe.pawScale}}",
+        "vertices": "{{recipe.cylinderVertices}}",
+        "name": "{{objects.pawFrontRight}}"
+      }
+    },
+    {
+      "tool": "create_mesh_object",
+      "status": "rendering",
+      "message": "正在摆好后腿。",
+      "kwargs": {
+        "primitive_type": "cylinder",
+        "size": "{{recipe.pawSize}}",
+        "location": "{{recipe.pawBackLeftLocation}}",
+        "rotation": [0, 0, 0],
+        "scale": "{{recipe.pawScale}}",
+        "vertices": "{{recipe.cylinderVertices}}",
+        "name": "{{objects.pawBackLeft}}"
+      }
+    },
+    {
+      "tool": "create_mesh_object",
+      "status": "rendering",
+      "message": "正在摆好后腿。",
+      "kwargs": {
+        "primitive_type": "cylinder",
+        "size": "{{recipe.pawSize}}",
+        "location": "{{recipe.pawBackRightLocation}}",
+        "rotation": [0, 0, 0],
+        "scale": "{{recipe.pawScale}}",
+        "vertices": "{{recipe.cylinderVertices}}",
+        "name": "{{objects.pawBackRight}}"
+      }
+    },
+    {
+      "tool": "create_mesh_object",
+      "status": "rendering",
+      "message": "正在点亮眼睛。",
+      "kwargs": {
+        "primitive_type": "sphere",
+        "size": "{{recipe.eyeSize}}",
+        "location": "{{recipe.eyeLeftLocation}}",
+        "rotation": [0, 0, 0],
+        "scale": "{{recipe.eyeScale}}",
+        "segments": "{{recipe.sphereSegments}}",
+        "rings": "{{recipe.sphereRings}}",
+        "name": "{{objects.eyeLeft}}"
+      }
+    },
+    {
+      "tool": "create_mesh_object",
+      "status": "rendering",
+      "message": "正在点亮眼睛。",
+      "kwargs": {
+        "primitive_type": "sphere",
+        "size": "{{recipe.eyeSize}}",
+        "location": "{{recipe.eyeRightLocation}}",
+        "rotation": [0, 0, 0],
+        "scale": "{{recipe.eyeScale}}",
+        "segments": "{{recipe.sphereSegments}}",
+        "rings": "{{recipe.sphereRings}}",
+        "name": "{{objects.eyeRight}}"
+      }
+    },
+    {
+      "tool": "add_modifier",
+      "status": "rendering",
+      "message": "正在柔化身体体积。",
+      "kwargs": {
+        "object_name": "{{objects.body}}",
+        "modifier_type": "SUBSURF",
+        "name": "FoxBodySubsurf",
+        "settings": {
+          "levels": "{{recipe.bodySubsurfLevels}}",
+          "render_levels": "{{recipe.bodySubsurfLevels}}",
+          "subdivision_type": "CATMULL_CLARK"
+        }
+      }
+    },
+    {
+      "tool": "apply_modifier",
+      "status": "rendering",
+      "message": "正在固定身体轮廓。",
+      "kwargs": {
+        "object_name": "{{objects.body}}",
+        "modifier_name": "FoxBodySubsurf"
+      }
+    },
+    {
+      "tool": "add_modifier",
+      "status": "rendering",
+      "message": "正在柔化头部轮廓。",
+      "kwargs": {
+        "object_name": "{{objects.head}}",
+        "modifier_type": "SUBSURF",
+        "name": "FoxHeadSubsurf",
+        "settings": {
+          "levels": "{{recipe.headSubsurfLevels}}",
+          "render_levels": "{{recipe.headSubsurfLevels}}",
+          "subdivision_type": "CATMULL_CLARK"
+        }
+      }
+    },
+    {
+      "tool": "apply_modifier",
+      "status": "rendering",
+      "message": "正在固定头部轮廓。",
+      "kwargs": {
+        "object_name": "{{objects.head}}",
+        "modifier_name": "FoxHeadSubsurf"
+      }
+    },
+    {
+      "tool": "add_modifier",
+      "status": "rendering",
+      "message": "正在柔化尾巴轮廓。",
+      "kwargs": {
+        "object_name": "{{objects.tail}}",
+        "modifier_type": "SUBSURF",
+        "name": "FoxTailSubsurf",
+        "settings": {
+          "levels": "{{recipe.tailSubsurfLevels}}",
+          "render_levels": "{{recipe.tailSubsurfLevels}}",
+          "subdivision_type": "CATMULL_CLARK"
+        }
+      }
+    },
+    {
+      "tool": "apply_modifier",
+      "status": "rendering",
+      "message": "正在固定尾巴轮廓。",
+      "kwargs": {
+        "object_name": "{{objects.tail}}",
+        "modifier_name": "FoxTailSubsurf"
+      }
+    },
+    {
+      "tool": "add_modifier",
+      "status": "rendering",
+      "message": "正在柔化鼻口轮廓。",
+      "kwargs": {
+        "object_name": "{{objects.muzzle}}",
+        "modifier_type": "SUBSURF",
+        "name": "FoxMuzzleSubsurf",
+        "settings": {
+          "levels": "{{recipe.muzzleSubsurfLevels}}",
+          "render_levels": "{{recipe.muzzleSubsurfLevels}}",
+          "subdivision_type": "CATMULL_CLARK"
+        }
+      }
+    },
+    {
+      "tool": "apply_modifier",
+      "status": "rendering",
+      "message": "正在固定鼻口轮廓。",
+      "kwargs": {
+        "object_name": "{{objects.muzzle}}",
+        "modifier_name": "FoxMuzzleSubsurf"
+      }
+    },
+    {
+      "tool": "add_modifier",
+      "status": "rendering",
+      "message": "正在柔化耳朵轮廓。",
+      "kwargs": {
+        "object_name": "{{objects.earLeft}}",
+        "modifier_type": "SUBSURF",
+        "name": "FoxEarLeftSubsurf",
+        "settings": {
+          "levels": "{{recipe.earSubsurfLevels}}",
+          "render_levels": "{{recipe.earSubsurfLevels}}",
+          "subdivision_type": "CATMULL_CLARK"
+        }
+      }
+    },
+    {
+      "tool": "apply_modifier",
+      "status": "rendering",
+      "message": "正在固定耳朵轮廓。",
+      "kwargs": {
+        "object_name": "{{objects.earLeft}}",
+        "modifier_name": "FoxEarLeftSubsurf"
+      }
+    },
+    {
+      "tool": "add_modifier",
+      "status": "rendering",
+      "message": "正在柔化耳朵轮廓。",
+      "kwargs": {
+        "object_name": "{{objects.earRight}}",
+        "modifier_type": "SUBSURF",
+        "name": "FoxEarRightSubsurf",
+        "settings": {
+          "levels": "{{recipe.earSubsurfLevels}}",
+          "render_levels": "{{recipe.earSubsurfLevels}}",
+          "subdivision_type": "CATMULL_CLARK"
+        }
+      }
+    },
+    {
+      "tool": "apply_modifier",
+      "status": "rendering",
+      "message": "正在固定耳朵轮廓。",
+      "kwargs": {
+        "object_name": "{{objects.earRight}}",
+        "modifier_name": "FoxEarRightSubsurf"
+      }
+    },
+    {
+      "tool": "create_material",
+      "status": "rendering",
+      "message": "正在生成主材质。",
+      "kwargs": {
+        "name": "{{materials.body}}",
+        "material_type": "principled",
+        "base_color": "{{palette.bodyColor}}",
+        "metallic": "{{recipe.bodyMaterialMetallic}}",
+        "roughness": "{{recipe.bodyMaterialRoughness}}",
+        "emission_color": "{{palette.emissionColor}}",
+        "emission_strength": "{{recipe.bodyEmissionStrength}}"
+      }
+    },
+    {
+      "tool": "create_material",
+      "status": "rendering",
+      "message": "正在生成腹部与鼻口材质。",
+      "kwargs": {
+        "name": "{{materials.detail}}",
+        "material_type": "principled",
+        "base_color": "{{palette.detailColor}}",
+        "metallic": 0,
+        "roughness": "{{recipe.detailMaterialRoughness}}",
+        "emission_color": "{{palette.detailColor}}",
+        "emission_strength": 0
+      }
+    },
+    {
+      "tool": "create_material",
+      "status": "rendering",
+      "message": "正在生成尾巴点缀材质。",
+      "kwargs": {
+        "name": "{{materials.accent}}",
+        "material_type": "principled",
+        "base_color": "{{palette.accentColor}}",
+        "metallic": 0,
+        "roughness": "{{recipe.accentMaterialRoughness}}",
+        "emission_color": "{{palette.emissionColor}}",
+        "emission_strength": "{{recipe.accentEmissionStrength}}"
+      }
+    },
+    {
+      "tool": "create_material",
+      "status": "rendering",
+      "message": "正在生成眼睛材质。",
+      "kwargs": {
+        "name": "{{materials.eye}}",
+        "material_type": "principled",
+        "base_color": "{{palette.eyeColor}}",
+        "metallic": 0,
+        "roughness": "{{recipe.eyeMaterialRoughness}}",
+        "emission_color": "{{palette.emissionColor}}",
+        "emission_strength": "{{recipe.eyeEmissionStrength}}"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在给身体上色。",
+      "kwargs": {
+        "object_name": "{{objects.body}}",
+        "material_name": "{{materials.body}}"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在给头部上色。",
+      "kwargs": {
+        "object_name": "{{objects.head}}",
+        "material_name": "{{materials.body}}"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在给耳朵上色。",
+      "kwargs": {
+        "object_name": "{{objects.earLeft}}",
+        "material_name": "{{materials.body}}"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在给耳朵上色。",
+      "kwargs": {
+        "object_name": "{{objects.earRight}}",
+        "material_name": "{{materials.body}}"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在给尾巴上色。",
+      "kwargs": {
+        "object_name": "{{objects.tail}}",
+        "material_name": "{{materials.body}}"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在给腹部细节上色。",
+      "kwargs": {
+        "object_name": "{{objects.muzzle}}",
+        "material_name": "{{materials.detail}}"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在给尾巴末端上色。",
+      "kwargs": {
+        "object_name": "{{objects.tailTip}}",
+        "material_name": "{{materials.accent}}"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在给前腿上色。",
+      "kwargs": {
+        "object_name": "{{objects.pawFrontLeft}}",
+        "material_name": "{{materials.detail}}"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在给前腿上色。",
+      "kwargs": {
+        "object_name": "{{objects.pawFrontRight}}",
+        "material_name": "{{materials.detail}}"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在给后腿上色。",
+      "kwargs": {
+        "object_name": "{{objects.pawBackLeft}}",
+        "material_name": "{{materials.detail}}"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在给后腿上色。",
+      "kwargs": {
+        "object_name": "{{objects.pawBackRight}}",
+        "material_name": "{{materials.detail}}"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在给眼睛上色。",
+      "kwargs": {
+        "object_name": "{{objects.eyeLeft}}",
+        "material_name": "{{materials.eye}}"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在给眼睛上色。",
+      "kwargs": {
+        "object_name": "{{objects.eyeRight}}",
+        "material_name": "{{materials.eye}}"
+      }
+    },
+    {
+      "tool": "set_optimal_camera_for_all",
+      "status": "rendering",
+      "message": "正在自动摆好小狐狸海报镜头。",
+      "kwargs": {}
+    },
+    {
+      "tool": "render_image",
+      "status": "exporting",
+      "message": "正在渲染封面图。",
+      "kwargs": {
+        "output_path": "{{artifacts.posterFile}}",
+        "animation": false,
+        "return_base64": false,
+        "use_viewport": false
+      }
+    },
+    {
+      "tool": "export_file",
+      "status": "exporting",
+      "message": "正在导出 GLB。",
+      "kwargs": {
+        "file_path": "{{artifacts.modelFile}}",
+        "file_format": "glb",
+        "selected_only": false,
+        "apply_modifiers": true
+      }
+    }
+  ]
+}

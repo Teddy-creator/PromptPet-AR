@@ -1,0 +1,97 @@
+{
+  "assetContractFile": "assets/fox-base/fox-base-v10.contract.json",
+  "speciesKey": "fox",
+  "supportedSpecies": ["fox"],
+  "displayName": "主题变体小狐狸桌宠",
+  "templateVersion": "fox-base-v10",
+  "generatorMode": "template-variant",
+  "productCopy": {
+    "supportedSpeciesLine": "支持物种定制，目前支持 fox。",
+    "scopeLine": "一句话当前主要影响已支持 fox 的主题、配色、配饰和气质，不做任意动物自由建模。"
+  },
+  "sourceBlendFile": "assets/fox-base/source/fox-base-v10.blend",
+  "exportFiles": {
+    "modelFile": "assets/fox-base/export/fox-base-v10.glb",
+    "runtimeTemplateFile": "assets/fox-base/export/fox-base-v10-runtime.glb",
+    "usdFile": "assets/fox-base/export/fox-base-v10.usd",
+    "usdzFile": "assets/fox-base/export/fox-base-v10.usdz",
+    "posterFile": "assets/fox-base/export/fox-base-v10-poster.png",
+    "stageFile": "assets/fox-base/export/fox-base-poster-stage-v10.glb"
+  },
+  "demoFiles": {
+    "modelPath": "public/demo/fox-base-v10-lucky-charm.glb",
+    "usdzPath": "public/demo/fox-base-v10-lucky-charm.usdz",
+    "posterPath": "public/demo/fox-base-v10-lucky-charm-poster.png",
+    "modelUrl": "/demo/fox-base-v10-lucky-charm.glb?v=20260326-v10a",
+    "usdzUrl": "/demo/fox-base-v10-lucky-charm.usdz?v=20260326-v10a",
+    "posterUrl": "/demo/fox-base-v10-lucky-charm-poster.png"
+  },
+  "assetExportScaleFactor": 0.31,
+  "assetExportFacingRotation": [0, 0, 180],
+  "recipeDefaults": {
+    "archetype": "fox",
+    "cameraPreset": "pet-poster-v10",
+    "posePreset": "fox-idle-stand-v1",
+    "arPlacementPreset": "android-tabletop-v1",
+    "exportScaleFactor": 1,
+    "exportFacingRotation": [0, 0, 0],
+    "stageCameraLocation": [0.52, 0.98, 0.7],
+    "stageCameraRotation": [60.5, 0, 150.5],
+    "stageCameraFocalLength": 68,
+    "renderExposure": -0.22,
+    "renderGamma": 1
+  },
+  "posterRender": {
+    "resolutionX": 1400,
+    "resolutionY": 1400,
+    "samples": 64,
+    "fileFormat": "PNG",
+    "colorMode": "RGBA",
+    "transparent": false
+  },
+  "objects": {
+    "body": "FoxBase_Body",
+    "chest": "FoxBase_Chest",
+    "head": "FoxBase_Head",
+    "muzzle": "FoxBase_Muzzle",
+    "nose": "FoxBase_Nose",
+    "tail": "FoxBase_Tail",
+    "tailTip": "FoxBase_TailTip",
+    "eyeLeft": "FoxBase_EyeLeft",
+    "eyeRight": "FoxBase_EyeRight",
+    "accessoryBell": "FoxBase_AccBell",
+    "accessoryScarf": "FoxBase_AccScarf",
+    "accessoryFlower": "FoxBase_AccFlower",
+    "accessoryCrown": "FoxBase_AccCrown",
+    "accessoryTag": "FoxBase_AccTag",
+    "accessoryTie": "FoxBase_AccTie",
+    "accessoryBadge": "FoxBase_AccBadge",
+    "accessoryBow": "FoxBase_AccBow",
+    "accessoryPendant": "FoxBase_AccPendant"
+  },
+  "stageObjects": {
+    "plane": "FoxBase_StagePlane",
+    "importedCamera": "FoxBase_StageCam",
+    "renderCamera": "FoxBase_RenderCam",
+    "sun": "FoxBase_StageSun",
+    "keyLight": "FoxBase_StageKey",
+    "rimLight": "FoxBase_StageRim"
+  },
+  "sourceMaterials": {
+    "body": "FoxBase_Body_Mat",
+    "face": "FoxBase_Face_Mat",
+    "accent": "FoxBase_Accent_Mat",
+    "eye": "FoxBase_Eye_Mat",
+    "glow": "FoxBase_Glow_Mat",
+    "accessory": "FoxBase_Accessory_Mat",
+    "stage": "FoxBase_StagePlane_Mat"
+  },
+  "promptControls": [
+    "主色 / 辅色",
+    "主题 accent",
+    "小配饰",
+    "眼睛气质",
+    "尾巴末端效果",
+    "发光氛围"
+  ]
+}

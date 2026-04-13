@@ -1,0 +1,114 @@
+{
+  "requiredTools": [
+    "clear_scene",
+    "create_mesh_object",
+    "create_material",
+    "assign_material",
+    "set_optimal_camera_for_all",
+    "render_image",
+    "export_file"
+  ],
+  "metadata": {
+    "styleLabel": "{{styleLabel}}",
+    "structuredPrompt": "对象: 单体桌面宠物; 风格: {{styleLabel}}; 文本归一化: {{prompt}}; 执行后端: Blender MCP HTTP tools; 基础原型: {{objectPrimitive}}; 输出: model.glb + thumbnail.png + metadata.json;",
+    "outputFiles": [
+      "model.glb",
+      "thumbnail.png",
+      "metadata.json",
+      "adapter-status.json"
+    ],
+    "notes": [
+      "当前结果使用 Blender MCP Server 的基础建模与导出工具链生成。",
+      "如果你要替换成更复杂的宠物建模流程，可以直接修改这份 starter plan。"
+    ]
+  },
+  "steps": [
+    {
+      "tool": "clear_scene",
+      "status": "rendering",
+      "message": "正在清理 Blender 场景。",
+      "kwargs": {
+        "clear_objects": true,
+        "clear_materials": true,
+        "clear_textures": true,
+        "clear_animations": false,
+        "clear_node_groups": false,
+        "clear_worlds": false,
+        "keep_cameras": true,
+        "keep_lights": true
+      }
+    },
+    {
+      "tool": "create_mesh_object",
+      "status": "rendering",
+      "message": "正在创建小宠物基础原型。",
+      "kwargs": {
+        "primitive_type": "{{objectPrimitive}}",
+        "size": 1.4,
+        "location": [
+          0,
+          0,
+          0.82
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "subdivisions": 1,
+        "name": "{{objectName}}"
+      }
+    },
+    {
+      "tool": "create_material",
+      "status": "rendering",
+      "message": "正在生成材质风格。",
+      "kwargs": {
+        "name": "{{materialName}}",
+        "material_type": "principled",
+        "base_color": "{{styleBaseColor}}",
+        "metallic": "{{styleMetallic}}",
+        "roughness": "{{styleRoughness}}",
+        "emission_color": "{{styleEmissionColor}}",
+        "emission_strength": "{{styleEmissionStrength}}"
+      }
+    },
+    {
+      "tool": "assign_material",
+      "status": "rendering",
+      "message": "正在给模型绑定材质。",
+      "kwargs": {
+        "object_name": "{{objectName}}",
+        "material_name": "{{materialName}}"
+      }
+    },
+    {
+      "tool": "set_optimal_camera_for_all",
+      "status": "rendering",
+      "message": "正在自动摆好镜头。",
+      "kwargs": {}
+    },
+    {
+      "tool": "render_image",
+      "status": "exporting",
+      "message": "正在渲染封面图。",
+      "kwargs": {
+        "output_path": "{{artifacts.posterFile}}",
+        "animation": false,
+        "return_base64": false,
+        "use_viewport": false
+      }
+    },
+    {
+      "tool": "export_file",
+      "status": "exporting",
+      "message": "正在导出 GLB。",
+      "kwargs": {
+        "file_path": "{{artifacts.modelFile}}",
+        "file_format": "glb",
+        "selected_only": false,
+        "apply_modifiers": true
+      }
+    }
+  ]
+}

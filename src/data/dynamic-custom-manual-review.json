@@ -1,0 +1,247 @@
+[
+  {
+    "id": "manual-00a",
+    "style": "low-poly",
+    "customizationProfile": "experimental-addon",
+    "prompt": "做一只草莓甜点主题的小狐狸桌宠，莓果粉和奶油白配色，左耳旁边有一朵绿色小花，右耳朵有个红色的四叶草。",
+    "focus": ["双色主体", "左耳小花", "右耳四叶草", "植物类精修轮次"]
+  },
+  {
+    "id": "manual-00",
+    "style": "low-poly",
+    "customizationProfile": "experimental-addon",
+    "prompt": "做一只紫红色的狐狸，其中左耳有一个绿色领带，右耳朵有一个黑色的云朵形状的挂饰。",
+    "focus": ["紫红色主体", "左耳领带", "右耳云朵挂饰", "多实例局部颜色"]
+  },
+  {
+    "id": "manual-01",
+    "style": "cream-toy",
+    "customizationProfile": "experimental-addon",
+    "prompt": "做一只小狐狸桌宠，身体是荧光绿配色，同时脖子上挂一个银灰色小项链，右耳朵搞一个银灰色耳环。",
+    "focus": ["自然颜色", "项链", "耳环"]
+  },
+  {
+    "id": "manual-02",
+    "style": "cream-toy",
+    "customizationProfile": "experimental-addon",
+    "prompt": "不要任何配饰，除了右耳一个银灰色耳环。",
+    "focus": ["例外语义", "默认件删除"]
+  },
+  {
+    "id": "manual-03",
+    "style": "dream-glow",
+    "customizationProfile": "safe-overlay",
+    "prompt": "夜灯主题的小狐狸，主体亮橙色，额头戴绿色星冠，不要别的装饰。",
+    "focus": ["主题保留", "主体颜色覆盖", "默认件控制"]
+  },
+  {
+    "id": "manual-04",
+    "style": "low-poly",
+    "customizationProfile": "experimental-addon",
+    "prompt": "左右耳各一个荧光粉小耳环，狐狸主体是亮橙色。",
+    "focus": ["多实例", "局部颜色隔离"]
+  },
+  {
+    "id": "manual-05",
+    "style": "cream-toy",
+    "customizationProfile": "experimental-addon",
+    "prompt": "草莓甜点主题，脖子上挂一个小项链，右耳挂一个糖果耳饰，配件都做成紫色。",
+    "focus": ["主题+运行时小件", "局部统一颜色"]
+  },
+  {
+    "id": "manual-06",
+    "style": "low-poly",
+    "customizationProfile": "experimental-addon",
+    "prompt": "森林巡游风，左耳是一片叶子，右耳是一个小耳环，狐狸主体奶油橙。",
+    "focus": ["双 family", "双耳不同形状"]
+  },
+  {
+    "id": "manual-07",
+    "style": "dream-glow",
+    "customizationProfile": "experimental-addon",
+    "prompt": "荧光粉狐狸，脖子挂一个小项链，耳边不要别的装饰。",
+    "focus": ["自然颜色", "挂件+否定"]
+  },
+  {
+    "id": "manual-08",
+    "style": "cream-toy",
+    "customizationProfile": "safe-overlay",
+    "prompt": "大红色狐狸，胸前一个小领带，不要铃铛。",
+    "focus": ["稳定替换", "默认件删除"]
+  },
+  {
+    "id": "manual-09",
+    "style": "dream-glow",
+    "customizationProfile": "experimental-addon",
+    "prompt": "右耳朵搞一个绿色耳环，脖子上再挂一个小项链，狐狸主体是霓虹绿。",
+    "focus": ["自然表达", "双运行时配件"]
+  },
+  {
+    "id": "manual-10",
+    "style": "low-poly",
+    "customizationProfile": "experimental-addon",
+    "prompt": "什么装饰都不要，除了左右耳各一个紫色糖果挂件。",
+    "focus": ["例外语义", "左右耳对称"]
+  },
+  {
+    "id": "manual-11",
+    "style": "cream-toy",
+    "customizationProfile": "experimental-addon",
+    "prompt": "脖子上挂一串小链子，吊一个绿色小坠饰，狐狸本体是橘红色。",
+    "focus": ["链子自然说法", "pendant-charm"]
+  },
+  {
+    "id": "manual-12",
+    "style": "low-poly",
+    "customizationProfile": "experimental-addon",
+    "prompt": "左耳边一个森林形装饰，右耳边一个耳环，主体青柠绿。",
+    "focus": ["forest", "earring", "自然颜色"]
+  },
+  {
+    "id": "manual-13",
+    "style": "dream-glow",
+    "customizationProfile": "safe-overlay",
+    "prompt": "夜灯主题，狐狸主体荧光粉，尾巴尖再亮一点。",
+    "focus": ["自然颜色", "glow"]
+  },
+  {
+    "id": "manual-14",
+    "style": "cream-toy",
+    "customizationProfile": "experimental-addon",
+    "prompt": "不要任何配饰，除了胸前一个银灰色小项链。",
+    "focus": ["胸前单件", "例外语义"]
+  },
+  {
+    "id": "manual-15",
+    "style": "low-poly",
+    "customizationProfile": "experimental-addon",
+    "prompt": "右耳是绿色耳环，胸前再来一个绿色徽记形挂件，狐狸主体亮橙色。",
+    "focus": ["耳环", "陌生挂件近似", "颜色隔离"]
+  },
+  {
+    "id": "manual-16",
+    "style": "cream-toy",
+    "customizationProfile": "experimental-addon",
+    "prompt": "做得像桌宠一点，狐狸是荧光绿，脖子上挂小项链，别的挂件不要。",
+    "focus": ["自然说法", "项链", "否定"]
+  },
+  {
+    "id": "manual-17",
+    "style": "dream-glow",
+    "customizationProfile": "experimental-addon",
+    "prompt": "夜灯主题，右耳一个紫色耳环，左耳一个紫色星形小挂件，主体亮橙色。",
+    "focus": ["多 family", "多实例颜色一致"]
+  },
+  {
+    "id": "manual-18",
+    "style": "low-poly",
+    "customizationProfile": "safe-overlay",
+    "prompt": "森林巡游主题，不要围巾，换成绿色小吊牌，狐狸主体橘色。",
+    "focus": ["safe-overlay", "稳定替换"]
+  },
+  {
+    "id": "manual-19",
+    "style": "cream-toy",
+    "customizationProfile": "experimental-addon",
+    "prompt": "草莓甜点主题，胸前一个奶油甜点挂件，右耳一个小耳环，装饰都做成荧光粉。",
+    "focus": ["dessert-hang", "earring", "自然颜色"]
+  },
+  {
+    "id": "manual-20",
+    "style": "dream-glow",
+    "customizationProfile": "experimental-addon",
+    "prompt": "狐狸主体青柠绿，不要任何默认冠饰，额头只留一个绿色星冠，右耳再加一个耳环。",
+    "focus": ["默认件控制", "星冠+耳环并存"]
+  },
+  {
+    "id": "manual-21",
+    "style": "cream-toy",
+    "customizationProfile": "experimental-addon",
+    "prompt": "做一只小狐狸桌宠，红绿色配色，胸前挂一个紫色的草莓挂饰，左耳朵挂一个蓝色的小鱼挂饰。",
+    "focus": ["双色主体", "草莓挂饰", "小鱼挂饰", "颜色隔离"]
+  },
+  {
+    "id": "manual-22",
+    "style": "dream-glow",
+    "customizationProfile": "experimental-addon",
+    "prompt": "主体是荧光绿，右耳一个银色耳环，胸前一个黑色云朵挂饰。",
+    "focus": ["自然颜色", "耳环", "云朵挂饰"]
+  },
+  {
+    "id": "manual-23",
+    "style": "low-poly",
+    "customizationProfile": "experimental-addon",
+    "prompt": "不要任何配饰，除了左耳一个绿色小鱼挂饰。",
+    "focus": ["例外语义", "鱼形挂件", "默认件删除"]
+  },
+  {
+    "id": "manual-24",
+    "style": "cream-toy",
+    "customizationProfile": "experimental-addon",
+    "prompt": "胸前挂一个黑色云朵挂饰，右耳再来一个银色耳环，狐狸主体是紫红色。",
+    "focus": ["紫红主体", "双陌生挂件", "局部颜色"]
+  },
+  {
+    "id": "manual-25",
+    "style": "dream-glow",
+    "customizationProfile": "experimental-addon",
+    "prompt": "左耳一个蓝色小鱼挂饰，右耳一个紫色草莓挂饰，主体亮橙色。",
+    "focus": ["双耳不同陌生挂件", "位置", "颜色隔离"]
+  },
+  {
+    "id": "manual-26",
+    "style": "low-poly",
+    "customizationProfile": "experimental-addon",
+    "prompt": "胸前挂一个莓果挂件，左耳再挂一个叶片装饰，狐狸是荧光粉。",
+    "focus": ["berry", "leaf", "自然颜色"]
+  },
+  {
+    "id": "manual-27",
+    "style": "cream-toy",
+    "customizationProfile": "experimental-addon",
+    "prompt": "右耳朵搞一个小鱼形挂件，脖子上再挂一串项链，狐狸主体青柠绿。",
+    "focus": ["自然表达", "鱼形挂件", "项链"]
+  },
+  {
+    "id": "manual-28",
+    "style": "dream-glow",
+    "customizationProfile": "experimental-addon",
+    "prompt": "不要别的配饰，只保留胸前一个草莓挂饰和左耳一个耳环，主体紫红色。",
+    "focus": ["例外语义", "berry", "earring"]
+  },
+  {
+    "id": "manual-29",
+    "style": "low-poly",
+    "customizationProfile": "experimental-addon",
+    "prompt": "胸前是一个食物形挂件，右耳是一个动物形挂件，颜色分别做成黑色和绿色，狐狸主体橘红色。",
+    "focus": ["generic-food-charm", "generic-animal-charm", "颜色隔离"]
+  },
+  {
+    "id": "manual-30",
+    "style": "low-poly",
+    "customizationProfile": "experimental-addon",
+    "prompt": "不要任何配饰，除了右耳一个蓝色小船挂饰。",
+    "focus": ["陌生 noun 保留", "vehicle-charm", "小船轮廓", "近似说明"]
+  },
+  {
+    "id": "manual-31",
+    "style": "cream-toy",
+    "customizationProfile": "experimental-addon",
+    "prompt": "做一只小狐狸桌宠，左耳一个银色相机挂件。",
+    "focus": ["device-charm", "相机镜头", "literal noun fidelity"]
+  },
+  {
+    "id": "manual-32",
+    "style": "low-poly",
+    "customizationProfile": "experimental-addon",
+    "prompt": "做一只小狐狸桌宠，左耳一个黑色火箭挂饰。",
+    "focus": ["vehicle-charm", "火箭尾翼", "近似 vs 已实现"]
+  },
+  {
+    "id": "manual-33",
+    "style": "low-poly",
+    "customizationProfile": "experimental-addon",
+    "prompt": "草莓甜点主题，左耳是橙色的手机装饰，右耳是黑色的云朵挂件。",
+    "focus": ["陌生 noun", "device-charm", "双挂件并存", "truth layer"]
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "originalPrompt": "做一只幸运守护主题的小狐狸桌宠，暖沙奶油配色，胸前挂一个小铃铛，像书桌角落的开运盲盒",
+  "structuredPrompt": "对象: 已支持物种模板变体生成; 当前物种: fox; 模板: fox-base-v10; 生成模式: template-variant; 风格: 奶油玩具感; 主题槽位: lucky-charm; 主题标签: 幸运守护; 配色: 暖沙奶油 + 乳白细节 + 金色小铃铛; 亮点: 小铃铛配饰 + 柔和尾巴高光; 导出: glb 预览 + Android AR 优先 + iPhone Quick Look 兼容;",
+  "styleLabel": "奶油玩具感",
+  "exportedAt": "2026-03-24T00:00:00.000Z",
+  "modelSize": "117.0 KB",
+  "thumbnailPath": "/demo/fox-base-v10-lucky-charm-poster.png",
+  "outputFiles": ["model.glb", "model.usdz", "thumbnail.png", "metadata.json"],
+  "notes": [
+    "当前结果使用仓库内 fox-base-v10 主题变体母体导出样本作为 mock 演示素材。",
+    "这一轮默认强调 lucky-charm 主题、暖沙奶油配色和小铃铛配饰，让静态 demo 也更像一句话生成出来的小狐狸。",
+    "真实 Blender MCP 接入后将继续沿用同一套 GenerationRecord 结构，并复用同一份母体资产合同。"
+  ]
+}

@@ -1,0 +1,316 @@
+{
+  "cases": [
+    {
+      "id": "heldout-teacup-chest",
+      "prompt": "做一只小狐狸桌宠，胸前挂一个茶杯挂件。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "茶杯",
+        "prototypeIdsIncludes": ["cup"],
+        "anchorTraitsIncludes": ["chest-safe"]
+      }
+    },
+    {
+      "id": "heldout-mug-right-ear",
+      "prompt": "做一只小狐狸桌宠，右耳挂一个马克杯挂件。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "马克杯",
+        "prototypeIdsIncludes": ["mug"],
+        "anchorTraitsIncludes": ["ear-safe", "micro-hangable"]
+      }
+    },
+    {
+      "id": "heldout-bottle-chest",
+      "prompt": "做一只小狐狸桌宠，胸前挂一个饮料瓶挂件。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "饮料瓶",
+        "prototypeIdsIncludes": ["bottle"],
+        "anchorTraitsIncludes": ["chest-safe"]
+      }
+    },
+    {
+      "id": "heldout-badge-pin-chest",
+      "prompt": "做一只小狐狸桌宠，胸前别一个胸章。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "胸章",
+        "prototypeIdsIncludes": ["flat-badge"],
+        "anchorTraitsIncludes": ["chest-safe"]
+      }
+    },
+    {
+      "id": "heldout-badge-forest",
+      "prompt": "森林巡游主题，胸前加一个绿色 badge 挂件。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "徽章",
+        "prototypeIdsIncludes": ["flat-badge"],
+        "anchorTraitsIncludes": ["chest-safe"]
+      }
+    },
+    {
+      "id": "heldout-camera-polaroid-left-ear",
+      "prompt": "做一只小狐狸桌宠，左耳挂一个拍立得挂件。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "拍立得",
+        "prototypeIdsIncludes": ["camera"],
+        "anchorTraitsIncludes": ["ear-safe", "micro-hangable"]
+      }
+    },
+    {
+      "id": "heldout-camera-film-right-ear",
+      "prompt": "做一只小狐狸桌宠，右耳挂一个胶片相机挂件。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "相机",
+        "prototypeIdsIncludes": ["camera"],
+        "anchorTraitsIncludes": ["ear-safe", "micro-hangable"]
+      }
+    },
+    {
+      "id": "heldout-boat-sail-right-ear",
+      "prompt": "做一只小狐狸桌宠，右耳挂一个帆船挂件。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "帆船",
+        "prototypeIdsIncludes": ["boat"],
+        "anchorTraitsIncludes": ["ear-safe", "micro-hangable"]
+      }
+    },
+    {
+      "id": "heldout-boat-chest",
+      "prompt": "做一只小狐狸桌宠，胸前挂一个小艇装饰。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "小艇",
+        "prototypeIdsIncludes": ["boat"],
+        "anchorTraitsIncludes": ["chest-safe"]
+      }
+    },
+    {
+      "id": "heldout-rocket-ear",
+      "prompt": "做一只小狐狸桌宠，左耳挂一个飞船挂件。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "飞船",
+        "prototypeIdsIncludes": ["rocket"],
+        "anchorTraitsIncludes": ["ear-safe", "micro-hangable"]
+      }
+    },
+    {
+      "id": "heldout-key-chest",
+      "prompt": "做一只小狐狸桌宠，胸前挂一个钥匙装饰。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "钥匙",
+        "prototypeIdsIncludes": ["tool-head"],
+        "anchorTraitsIncludes": ["chest-safe"]
+      }
+    },
+    {
+      "id": "heldout-anchor-right-ear",
+      "prompt": "做一只小狐狸桌宠，右耳挂一个小锚挂件。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "锚",
+        "prototypeIdsIncludes": ["tool-head"],
+        "anchorTraitsIncludes": ["ear-safe", "micro-hangable"]
+      }
+    },
+    {
+      "id": "heldout-hammer-chest",
+      "prompt": "做一只小狐狸桌宠，胸前挂一个小锤挂件。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "小锤",
+        "prototypeIdsIncludes": ["tool-head"],
+        "anchorTraitsIncludes": ["chest-safe"]
+      }
+    },
+    {
+      "id": "heldout-scissors-right-ear",
+      "prompt": "做一只小狐狸桌宠，右耳挂一个剪刀挂件。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "剪刀",
+        "prototypeIdsIncludes": ["tool-head"],
+        "anchorTraitsIncludes": ["ear-safe", "micro-hangable"]
+      }
+    },
+    {
+      "id": "heldout-cup-double-word",
+      "prompt": "做一只小狐狸桌宠，胸前挂一个咖啡杯装饰。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "杯",
+        "prototypeIdsIncludes": ["cup"],
+        "anchorTraitsIncludes": ["chest-safe"]
+      }
+    },
+    {
+      "id": "heldout-mug-handle-word",
+      "prompt": "做一只小狐狸桌宠，胸前挂一个带把手的杯子挂件。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "杯子",
+        "prototypeIdsIncludes": ["cup"],
+        "anchorTraitsIncludes": ["chest-safe"]
+      }
+    },
+    {
+      "id": "heldout-mug-teagang-chest",
+      "prompt": "做一只小狐狸桌宠，胸前挂一个茶缸挂件。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "茶缸",
+        "prototypeIdsIncludes": ["mug"],
+        "anchorTraitsIncludes": ["chest-safe"]
+      }
+    },
+    {
+      "id": "heldout-bottle-perfume-chest",
+      "prompt": "做一只小狐狸桌宠，胸前挂一个香水瓶挂件。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "香水瓶",
+        "prototypeIdsIncludes": ["bottle"],
+        "anchorTraitsIncludes": ["chest-safe"]
+      }
+    },
+    {
+      "id": "heldout-bottle-medicine-right-ear",
+      "prompt": "做一只小狐狸桌宠，右耳挂一个药瓶挂件。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "药瓶",
+        "prototypeIdsIncludes": ["bottle"],
+        "anchorTraitsIncludes": ["ear-safe", "micro-hangable"]
+      }
+    },
+    {
+      "id": "heldout-camera-dslr-left-ear",
+      "prompt": "做一只小狐狸桌宠，左耳挂一个单反挂件。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "单反",
+        "prototypeIdsIncludes": ["camera"],
+        "anchorTraitsIncludes": ["ear-safe", "micro-hangable"]
+      }
+    },
+    {
+      "id": "heldout-camera-film-chest",
+      "prompt": "做一只小狐狸桌宠，胸前挂一个胶卷机装饰。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "胶卷机",
+        "prototypeIdsIncludes": ["camera"],
+        "anchorTraitsIncludes": ["chest-safe"]
+      }
+    },
+    {
+      "id": "heldout-boat-canoe-left-ear",
+      "prompt": "做一只小狐狸桌宠，左耳挂一个独木舟挂件。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "独木舟",
+        "prototypeIdsIncludes": ["boat"],
+        "anchorTraitsIncludes": ["ear-safe", "micro-hangable"]
+      }
+    },
+    {
+      "id": "heldout-badge-school-chest",
+      "prompt": "做一只小狐狸桌宠，胸前别一个校徽。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "校徽",
+        "prototypeIdsIncludes": ["flat-badge"],
+        "anchorTraitsIncludes": ["chest-safe"]
+      }
+    },
+    {
+      "id": "heldout-tool-wrench-right-ear",
+      "prompt": "做一只小狐狸桌宠，右耳挂一个扳手挂件。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "扳手",
+        "prototypeIdsIncludes": ["tool-head"],
+        "anchorTraitsIncludes": ["ear-safe", "micro-hangable"]
+      }
+    },
+    {
+      "id": "heldout-flower-left-ear",
+      "prompt": "做一只小狐狸桌宠，左耳挂一个小花挂件。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "小花",
+        "prototypeIdsIncludes": ["flower"],
+        "anchorTraitsIncludes": ["ear-safe", "micro-hangable"]
+      }
+    },
+    {
+      "id": "heldout-clover-right-ear",
+      "prompt": "做一只小狐狸桌宠，右耳挂一个四叶草挂件。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "四叶草",
+        "prototypeIdsIncludes": ["clover-charm"],
+        "anchorTraitsIncludes": ["ear-safe", "micro-hangable"]
+      }
+    }
+  ]
+}

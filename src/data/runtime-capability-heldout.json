@@ -1,0 +1,281 @@
+{
+  "cases": [
+    {
+      "id": "runtime-capability-scarf-small",
+      "prompt": "做一只小狐狸桌宠，胸前系一个黑色小围巾。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "mockPayload": {
+        "accessoryRequests": [
+          {
+            "requestedLabel": "黑色小围巾",
+            "requestedNoun": "围巾",
+            "nounSpan": "小围巾",
+            "nounGloss": "small scarf",
+            "objectCategory": "ornament",
+            "designConfidence": 0.98,
+            "requestedAnchorPhrase": "胸前",
+            "familyGuess": "generic-ornament",
+            "familyResolutionSource": "openai",
+            "prototypeCandidates": [
+              {
+                "id": "scarf",
+                "confidence": 0.99
+              }
+            ],
+            "traits": ["soft", "chest-safe"],
+            "mustKeep": true,
+            "allowApproximation": true
+          }
+        ]
+      },
+      "expect": {
+        "runtimeShapeClass": "scarf",
+        "resolutionSource": "prototype-pack",
+        "requiredCapabilities": [
+          "host-coupled",
+          "chest-wrap",
+          "soft-body",
+          "front-readable",
+          "dual-tail",
+          "face-safe"
+        ],
+        "forbiddenCapabilities": ["ear-side-hang", "micro-hang", "rigid-body"],
+        "requiresDesignContract": true,
+        "capabilityClass": "host-coupled-chest-wrap",
+        "primaryReadTarget": "scarf",
+        "requiredVisibleParts": ["wrap-band", "knot", "tail-left", "tail-right"]
+      }
+    },
+    {
+      "id": "runtime-capability-neckerchief",
+      "prompt": "做一只小狐狸桌宠，胸前系一个黑色小领巾。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "mockPayload": {
+        "accessoryRequests": [
+          {
+            "requestedLabel": "黑色小领巾",
+            "requestedNoun": "领巾",
+            "nounSpan": "小领巾",
+            "nounGloss": "small neckerchief",
+            "objectCategory": "ornament",
+            "designConfidence": 0.97,
+            "requestedAnchorPhrase": "胸前",
+            "familyGuess": "generic-ornament",
+            "familyResolutionSource": "openai",
+            "prototypeCandidates": [
+              {
+                "id": "scarf",
+                "confidence": 0.97
+              }
+            ],
+            "traits": ["soft", "chest-safe"],
+            "mustKeep": true,
+            "allowApproximation": true
+          }
+        ]
+      },
+      "expect": {
+        "runtimeShapeClass": "scarf",
+        "resolutionSource": "prototype-pack",
+        "requiredCapabilities": [
+          "host-coupled",
+          "chest-wrap",
+          "soft-body",
+          "front-readable",
+          "dual-tail",
+          "face-safe"
+        ],
+        "forbiddenCapabilities": ["ear-side-hang", "micro-hang", "rigid-body"],
+        "requiresDesignContract": true,
+        "capabilityClass": "host-coupled-chest-wrap",
+        "primaryReadTarget": "领巾",
+        "requiredVisibleParts": ["wrap-band", "knot", "tail-left", "tail-right"]
+      }
+    },
+    {
+      "id": "runtime-capability-silk-scarf",
+      "prompt": "做一只小狐狸桌宠，胸前系一个酒红色小丝巾。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "mockPayload": {
+        "accessoryRequests": [
+          {
+            "requestedLabel": "酒红色小丝巾",
+            "requestedNoun": "丝巾",
+            "nounSpan": "小丝巾",
+            "nounGloss": "small silk scarf",
+            "objectCategory": "ornament",
+            "designConfidence": 0.96,
+            "requestedAnchorPhrase": "胸前",
+            "familyGuess": "generic-ornament",
+            "familyResolutionSource": "openai",
+            "prototypeCandidates": [
+              {
+                "id": "scarf",
+                "confidence": 0.96
+              }
+            ],
+            "traits": ["soft", "chest-safe"],
+            "mustKeep": true,
+            "allowApproximation": true
+          }
+        ]
+      },
+      "expect": {
+        "runtimeShapeClass": "scarf",
+        "resolutionSource": "prototype-pack",
+        "requiredCapabilities": [
+          "host-coupled",
+          "chest-wrap",
+          "soft-body",
+          "front-readable",
+          "dual-tail",
+          "face-safe"
+        ],
+        "forbiddenCapabilities": ["ear-side-hang", "micro-hang", "rigid-body"],
+        "requiresDesignContract": true,
+        "capabilityClass": "host-coupled-chest-wrap",
+        "primaryReadTarget": "丝巾",
+        "requiredVisibleParts": ["wrap-band", "knot", "tail-left", "tail-right"]
+      }
+    },
+    {
+      "id": "runtime-capability-badge-rigid-control",
+      "prompt": "做一只小狐狸桌宠，胸前别一个金色校徽。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "mockPayload": {
+        "accessoryRequests": [
+          {
+            "requestedLabel": "金色校徽",
+            "requestedNoun": "校徽",
+            "nounSpan": "校徽",
+            "nounGloss": "school badge",
+            "objectCategory": "badge",
+            "designConfidence": 0.96,
+            "requestedAnchorPhrase": "胸前",
+            "familyGuess": "generic-ornament",
+            "familyResolutionSource": "openai",
+            "prototypeCandidates": [
+              {
+                "id": "flat-badge",
+                "confidence": 0.97
+              }
+            ],
+            "traits": ["rigid", "flat-face", "chest-safe"],
+            "mustKeep": true,
+            "allowApproximation": true
+          }
+        ]
+      },
+      "expect": {
+        "runtimeShapeClass": "badge",
+        "resolutionSource": "prototype-pack",
+        "requiredCapabilities": [
+          "host-coupled",
+          "front-readable",
+          "flat-face-readable",
+          "rigid-body"
+        ],
+        "forbiddenCapabilities": ["chest-wrap", "dual-tail", "ear-side-hang"],
+        "requiresDesignContract": true,
+        "capabilityClass": "host-coupled-chest-rigid-front-readable",
+        "primaryReadTarget": "校徽"
+      }
+    },
+    {
+      "id": "runtime-capability-camera-chest-rigid",
+      "prompt": "做一只小狐狸桌宠，胸前挂一个奶油色小相机。",
+      "style": "dream-glow",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "mockPayload": {
+        "accessoryRequests": [
+          {
+            "requestedLabel": "奶油色小相机",
+            "requestedNoun": "小相机",
+            "nounSpan": "小相机",
+            "nounGloss": "small camera",
+            "objectCategory": "device",
+            "designConfidence": 0.97,
+            "requestedAnchorPhrase": "胸前",
+            "familyGuess": "generic-ornament",
+            "familyResolutionSource": "openai",
+            "prototypeCandidates": [
+              {
+                "id": "camera",
+                "confidence": 0.98
+              }
+            ],
+            "traits": ["chest-safe", "rigid", "flat-face"],
+            "mustKeep": true,
+            "allowApproximation": true
+          }
+        ]
+      },
+      "expect": {
+        "runtimeShapeClass": "camera-charm",
+        "resolutionSource": "prototype-pack",
+        "requiredCapabilities": [
+          "host-coupled",
+          "front-readable",
+          "rigid-body",
+          "flat-face-readable"
+        ],
+        "forbiddenCapabilities": ["chest-wrap", "dual-tail"],
+        "requiresDesignContract": true,
+        "capabilityClass": "host-coupled-chest-rigid-front-readable",
+        "primaryReadTarget": "小相机"
+      }
+    },
+    {
+      "id": "runtime-capability-camera-ear-control",
+      "prompt": "做一只小狐狸桌宠，右耳一个银色相机挂件。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "mockPayload": {
+        "accessoryRequests": [
+          {
+            "requestedLabel": "银色相机挂件",
+            "requestedNoun": "相机",
+            "nounSpan": "相机挂件",
+            "nounGloss": "camera charm",
+            "objectCategory": "device",
+            "designConfidence": 0.97,
+            "requestedAnchorPhrase": "右耳",
+            "familyGuess": "generic-ornament",
+            "familyResolutionSource": "openai",
+            "prototypeCandidates": [
+              {
+                "id": "camera",
+                "confidence": 0.98
+              }
+            ],
+            "traits": ["rigid", "flat-face", "micro-hangable"],
+            "mustKeep": true,
+            "allowApproximation": true
+          }
+        ]
+      },
+      "expect": {
+        "runtimeShapeClass": "camera-charm",
+        "resolutionSource": "prototype-pack",
+        "requiredCapabilities": [
+          "ear-side-hang",
+          "micro-hang",
+          "rigid-body",
+          "front-readable"
+        ],
+        "forbiddenCapabilities": ["host-coupled", "chest-wrap", "dual-tail"],
+        "requiresDesignContract": false
+      }
+    }
+  ]
+}

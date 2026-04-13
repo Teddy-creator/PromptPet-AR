@@ -1,0 +1,112 @@
+{
+  "cases": [
+    {
+      "id": "semantic-cup-chest",
+      "prompt": "做一只黑色的小狐狸桌宠，胸前挂一个蓝色水杯。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "水杯",
+        "prototypeIdsIncludes": ["cup", "mug"],
+        "traitsIncludes": ["rigid", "open-top", "cylindrical", "chest-safe"],
+        "negativeLookalikesIncludes": ["水杯 不能退化成 generic ornament"],
+        "retrievalReferenceIdsIncludes": ["canon-ornament-generic"],
+        "runtimeReferenceIdsIncludes": ["canon-ornament-generic"],
+        "runtimeSourceModesIncludes": ["canonical-blueprint"]
+      }
+    },
+    {
+      "id": "semantic-camera-ear",
+      "prompt": "做一只小狐狸桌宠，左耳一个银色相机挂件。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "相机",
+        "prototypeIdsIncludes": ["camera"],
+        "traitsIncludes": ["rigid", "flat-face", "ear-safe", "micro-hangable"],
+        "negativeLookalikesIncludes": ["相机 不能看起来像普通牌子"],
+        "retrievalReferenceIdsIncludes": ["ref-camera-compact"],
+        "runtimeReferenceIdsIncludes": ["ref-camera-compact"],
+        "runtimeSourceModesIncludes": ["cached-reference"]
+      }
+    },
+    {
+      "id": "semantic-badge-chest",
+      "prompt": "做一只森林巡游主题的小狐狸桌宠，胸前加一个小徽章，徽章是绿色的。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "徽章",
+        "prototypeIdsIncludes": ["flat-badge"],
+        "traitsIncludes": ["rigid", "flat-face", "chest-safe"],
+        "retrievalReferenceIdsIncludes": ["canon-symbol-generic"],
+        "runtimeReferenceIdsIncludes": ["canon-symbol-generic"],
+        "runtimeSourceModesIncludes": ["canonical-blueprint"]
+      }
+    },
+    {
+      "id": "semantic-scarf-chest",
+      "prompt": "做一只小狐狸桌宠，胸前系一个黑色小围巾。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "围巾",
+        "prototypeIdsIncludes": ["scarf"],
+        "traitsIncludes": ["soft", "chest-safe"],
+        "retrievalReferenceIdsIncludes": ["canon-scarf-chest"],
+        "runtimeReferenceIdsIncludes": ["canon-scarf-chest"],
+        "runtimeSourceModesIncludes": ["canonical-blueprint"]
+      }
+    },
+    {
+      "id": "semantic-boat-ear",
+      "prompt": "不要任何配饰，除了右耳一个蓝色小船挂饰。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "小船",
+        "prototypeIdsIncludes": ["boat"],
+        "traitsIncludes": ["rigid", "ear-safe", "micro-hangable"],
+        "negativeLookalikesIncludes": ["小船 不能看起来像普通圆球"],
+        "retrievalReferenceIdsIncludes": ["ref-boat-charm"],
+        "runtimeReferenceIdsIncludes": ["ref-boat-charm"],
+        "runtimeSourceModesIncludes": ["cached-reference"]
+      }
+    },
+    {
+      "id": "semantic-flower-ear",
+      "prompt": "做一只小狐狸桌宠，左耳一个绿色小花挂件。",
+      "style": "cream-toy",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "小花",
+        "prototypeIdsIncludes": ["flower"],
+        "traitsIncludes": ["soft", "ear-safe", "micro-hangable"],
+        "retrievalReferenceIdsIncludes": ["canon-flower-ear-side"],
+        "runtimeReferenceIdsIncludes": ["canon-flower-ear-side"],
+        "runtimeSourceModesIncludes": ["canonical-blueprint"]
+      }
+    },
+    {
+      "id": "semantic-clover-ear",
+      "prompt": "做一只小狐狸桌宠，右耳一个红色四叶草挂件。",
+      "style": "low-poly",
+      "generationMode": "dynamic-custom",
+      "customizationProfile": "experimental-addon",
+      "expect": {
+        "contractRequestedNounIncludes": "四叶草",
+        "prototypeIdsIncludes": ["clover-charm"],
+        "traitsIncludes": ["flat-face", "ear-safe", "micro-hangable"],
+        "retrievalReferenceIdsIncludes": ["canon-clover-ear-side"],
+        "runtimeReferenceIdsIncludes": ["canon-clover-ear-side"],
+        "runtimeSourceModesIncludes": ["canonical-blueprint"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "assetContractFile": "assets/fox-base/fox-base-v9.contract.json",
+  "speciesKey": "fox",
+  "supportedSpecies": ["fox"],
+  "displayName": "主题变体小狐狸桌宠",
+  "templateVersion": "fox-base-v9",
+  "generatorMode": "template-variant",
+  "productCopy": {
+    "supportedSpeciesLine": "支持物种定制，目前支持 fox。",
+    "scopeLine": "一句话当前主要影响已支持 fox 的主题、配色、配饰和气质，不做任意动物自由建模。"
+  },
+  "sourceBlendFile": "assets/fox-base/source/fox-base-v9.blend",
+  "exportFiles": {
+    "modelFile": "assets/fox-base/export/fox-base-v9.glb",
+    "usdFile": "assets/fox-base/export/fox-base-v9.usd",
+    "usdzFile": "assets/fox-base/export/fox-base-v9.usdz",
+    "posterFile": "assets/fox-base/export/fox-base-v9-poster.png",
+    "stageFile": "assets/fox-base/export/fox-base-poster-stage-v9.glb"
+  },
+  "demoFiles": {
+    "modelPath": "public/demo/fox-base-v9.glb",
+    "usdzPath": "public/demo/fox-base-v9.usdz",
+    "posterPath": "public/demo/fox-base-v9-poster.png",
+    "modelUrl": "/demo/fox-base-v9.glb?v=20260326-arfix1",
+    "usdzUrl": "/demo/fox-base-v9.usdz?v=20260326-arfix1",
+    "posterUrl": "/demo/fox-base-v9-poster.png"
+  },
+  "assetExportScaleFactor": 0.34,
+  "assetExportFacingRotation": [0, 0, 180],
+  "recipeDefaults": {
+    "archetype": "fox",
+    "cameraPreset": "pet-poster-v9",
+    "posePreset": "fox-idle-stand-v1",
+    "arPlacementPreset": "android-tabletop-v1",
+    "exportScaleFactor": 1,
+    "exportFacingRotation": [0, 0, 0],
+    "stageCameraLocation": [0.44, 0.82, 0.64],
+    "stageCameraRotation": [62.5, 0, 149.5],
+    "stageCameraFocalLength": 76,
+    "renderExposure": -0.3,
+    "renderGamma": 1
+  },
+  "posterRender": {
+    "resolutionX": 1400,
+    "resolutionY": 1400,
+    "samples": 64,
+    "fileFormat": "PNG",
+    "colorMode": "RGBA",
+    "transparent": false
+  },
+  "objects": {
+    "body": "FoxBase_Body",
+    "chest": "FoxBase_Chest",
+    "head": "FoxBase_Head",
+    "muzzle": "FoxBase_Muzzle",
+    "nose": "FoxBase_Nose",
+    "tail": "FoxBase_Tail",
+    "tailTip": "FoxBase_TailTip",
+    "eyeLeft": "FoxBase_EyeLeft",
+    "eyeRight": "FoxBase_EyeRight",
+    "accessoryBell": "FoxBase_AccBell",
+    "accessoryScarf": "FoxBase_AccScarf",
+    "accessoryFlower": "FoxBase_AccFlower",
+    "accessoryCrown": "FoxBase_AccCrown",
+    "accessoryTag": "FoxBase_AccTag"
+  },
+  "stageObjects": {
+    "plane": "FoxBase_StagePlane",
+    "importedCamera": "FoxBase_StageCam",
+    "renderCamera": "FoxBase_RenderCam",
+    "sun": "FoxBase_StageSun",
+    "keyLight": "FoxBase_StageKey",
+    "rimLight": "FoxBase_StageRim"
+  },
+  "sourceMaterials": {
+    "body": "FoxBase_Body_Mat",
+    "face": "FoxBase_Face_Mat",
+    "accent": "FoxBase_Accent_Mat",
+    "eye": "FoxBase_Eye_Mat",
+    "glow": "FoxBase_Glow_Mat",
+    "accessory": "FoxBase_Accessory_Mat",
+    "stage": "FoxBase_StagePlane_Mat"
+  },
+  "promptControls": [
+    "主色 / 辅色",
+    "主题 accent",
+    "小配饰",
+    "眼睛气质",
+    "尾巴末端效果",
+    "发光氛围"
+  ]
+}
